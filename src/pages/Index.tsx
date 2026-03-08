@@ -31,6 +31,13 @@ const Index = () => {
     { icon: Heart, title: "Atendimento humanizado", desc: "Cuidado e acolhimento em cada etapa do seu exame." },
   ];
 
+  const newsItems = [
+    { title: "Med Imagem investe em novo equipamento de ressonância magnética 3T", date: "05 Mar 2026", category: "Clínica", summary: "A clínica acaba de adquirir um aparelho de última geração que oferece imagens com altíssima definição e maior conforto ao paciente." },
+    { title: "Campanha de mamografia gratuita em março", date: "01 Mar 2026", category: "Saúde", summary: "Ação social para mulheres acima de 40 anos da região de São Mateus." },
+    { title: "Inteligência artificial no diagnóstico por imagem", date: "22 Fev 2026", category: "Tecnologia", summary: "Como a IA está auxiliando radiologistas a detectar doenças com maior precisão." },
+    { title: "Novo horário de atendimento aos sábados", date: "15 Fev 2026", category: "Clínica", summary: "Agora a Med Imagem funciona também aos sábados pela manhã para sua comodidade." },
+  ];
+
   const blogPosts = [
     { title: "Preparo para ressonância magnética", slug: "preparo-ressonancia", excerpt: "Saiba tudo o que você precisa fazer antes de realizar uma ressonância magnética." },
     { title: "Quando fazer mamografia?", slug: "quando-fazer-mamografia", excerpt: "Entenda a importância da mamografia e a idade recomendada para começar." },
@@ -233,6 +240,66 @@ const Index = () => {
                 <Link to="/sobre">Conheça nossa história</Link>
               </Button>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Notícias */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <SectionHeading title="Notícias" subtitle="Fique por dentro das novidades da Med Imagem e do mundo da saúde." />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Destaque */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={0}
+            >
+              <Link to="/blog" className="group block relative rounded-xl overflow-hidden aspect-[4/3] shadow-card hover:shadow-elevated transition-shadow">
+                <img src={heroBg} alt={newsItems[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full mb-3">{newsItems[0].category}</span>
+                  <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">{newsItems[0].title}</h3>
+                  <p className="mt-2 text-sm text-white/80 line-clamp-2">{newsItems[0].summary}</p>
+                  <span className="mt-3 inline-block text-xs text-white/60">{newsItems[0].date}</span>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Cards secundários */}
+            <div className="flex flex-col gap-4">
+              {newsItems.slice(1).map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  custom={i + 1}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                >
+                  <Link to="/blog" className="group flex gap-4 bg-card rounded-lg p-4 shadow-card hover:shadow-elevated transition-shadow">
+                    <div className="w-28 h-20 rounded-md overflow-hidden flex-shrink-0">
+                      <img src={clinicExterior} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="flex flex-col justify-center min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-semibold text-primary">{item.category}</span>
+                        <span className="text-xs text-muted-foreground">{item.date}</span>
+                      </div>
+                      <h4 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">{item.title}</h4>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/blog">Ver todas as notícias</Link>
+            </Button>
           </div>
         </div>
       </section>
