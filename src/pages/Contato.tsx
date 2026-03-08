@@ -42,15 +42,6 @@ const Contato = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-primary rounded-2xl p-10 text-center">
-            <h2 className="text-2xl font-bold text-primary-foreground">Agende pelo WhatsApp</h2>
-            <p className="mt-2 text-primary-foreground/80">A forma mais rápida de agendar seu exame.</p>
-            <Button size="lg" className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold" asChild>
-              <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
-                <Phone className="w-5 h-5 mr-2" /> Falar no WhatsApp
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
     </Layout>

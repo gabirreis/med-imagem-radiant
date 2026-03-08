@@ -345,11 +345,6 @@ const Index = () => {
                   Agendar exame
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8" asChild>
-                <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
-                  Falar no WhatsApp
-                </a>
-              </Button>
             </div>
             <p className="mt-6 text-primary-foreground/60 text-sm">(27) 3763-5000 | (27) 99999-9999</p>
           </motion.div>
