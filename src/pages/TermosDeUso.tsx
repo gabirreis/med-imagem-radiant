@@ -79,7 +79,7 @@ const TermosDeUso = () => {
                 <a href="mailto:contato@medimagemsm.com.br" className="text-primary hover:underline">
                   contato@medimagemsm.com.br
                 </a>{" "}
-                ou pelo telefone (27) 3763-5000.
+                ou pelo telefone (27) 3763-3366.
               </p>
             </div>
           </div>

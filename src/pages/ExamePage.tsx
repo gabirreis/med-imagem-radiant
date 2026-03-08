@@ -88,12 +88,12 @@ const ExamePage = () => {
                 <p className="mt-2 text-sm text-primary-foreground/80">Entre em contato para agendar sua {exam.shortName}.</p>
                 <div className="mt-6 space-y-3">
                   <Button size="lg" className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold" asChild>
-                    <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
                       <Phone className="w-5 h-5 mr-2" /> Agendar exame
                     </a>
                   </Button>
                 </div>
-                <p className="mt-4 text-xs text-primary-foreground/60">(27) 3763-5000</p>
+                <p className="mt-4 text-xs text-primary-foreground/60">(27) 3763-3366</p>
               </div>
 
               <div className="bg-card rounded-xl p-6 shadow-card">
