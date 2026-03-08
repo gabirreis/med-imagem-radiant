@@ -47,11 +47,11 @@ const Header = () => {
             </a>
           </Button>
           <Button size="sm" asChild>
-            <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
-              <Phone className="w-4 h-4 mr-2" />
-              Agendar exame
-            </a>
-          </Button>
+              <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4 mr-2" />
+                Agendar exame
+              </a>
+            </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -89,7 +89,7 @@ const Header = () => {
                 </a>
               </Button>
               <Button size="sm" asChild>
-                <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Agendar exame
                 </a>

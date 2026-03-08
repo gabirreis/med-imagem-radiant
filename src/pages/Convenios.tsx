@@ -40,7 +40,7 @@ const Convenios = () => {
             <h2 className="text-2xl font-bold text-foreground">Não encontrou seu convênio?</h2>
             <p className="mt-2 text-muted-foreground">Entre em contato conosco para verificar a disponibilidade.</p>
             <Button className="mt-6" size="lg" asChild>
-              <a href="https://wa.me/5527999999999" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-5 h-5 mr-2" /> Falar conosco
               </a>
             </Button>

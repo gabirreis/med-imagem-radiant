@@ -18,8 +18,8 @@ const Contato = () => {
         <div className="container max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: Phone, title: "Telefone", info: "(27) 3763-5000", sub: "Segunda a sexta, 7h às 18h" },
-              { icon: MapPin, title: "Endereço", info: "São Mateus - ES", sub: "Centro" },
+              { icon: Phone, title: "Telefone", info: "(27) 3763-3366 / (27) 99868-4980", sub: "Segunda a sexta, 7h às 18h" },
+              { icon: MapPin, title: "Endereço", info: "Rua Ermelino Carneiro Sobrinho, 221", sub: "Bairro Fátima, São Mateus/ES" },
               { icon: Mail, title: "E-mail", info: "contato@medimagemsm.com.br", sub: "Respondemos em até 24h" },
               { icon: Clock, title: "Horário", info: "Seg a Sex: 7h às 18h", sub: "Sáb: 7h às 12h" },
             ].map((item, i) => (
