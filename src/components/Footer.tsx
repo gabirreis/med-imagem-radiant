@@ -64,8 +64,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-primary-foreground/10">
-        <div className="container py-6 text-center text-sm opacity-60">
-          © {new Date().getFullYear()} Med Imagem São Mateus. Todos os direitos reservados.
+        <div className="container py-6 text-center text-sm opacity-60 space-y-2">
+          <div className="flex items-center justify-center gap-3">
+            <Link to="/politica-de-privacidade" className="hover:opacity-100 transition-opacity">Política de Privacidade</Link>
+            <span>|</span>
+            <Link to="/termos-de-uso" className="hover:opacity-100 transition-opacity">Termos de Uso</Link>
+          </div>
+          <p>© {new Date().getFullYear()} Med Imagem São Mateus. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
