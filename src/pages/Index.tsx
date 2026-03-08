@@ -31,6 +31,13 @@ const Index = () => {
     { icon: Heart, title: "Atendimento humanizado", desc: "Cuidado e acolhimento em cada etapa do seu exame." },
   ];
 
+  const newsItems = [
+    { title: "Med Imagem investe em novo equipamento de ressonância magnética 3T", date: "05 Mar 2026", category: "Clínica", summary: "A clínica acaba de adquirir um aparelho de última geração que oferece imagens com altíssima definição e maior conforto ao paciente." },
+    { title: "Campanha de mamografia gratuita em março", date: "01 Mar 2026", category: "Saúde", summary: "Ação social para mulheres acima de 40 anos da região de São Mateus." },
+    { title: "Inteligência artificial no diagnóstico por imagem", date: "22 Fev 2026", category: "Tecnologia", summary: "Como a IA está auxiliando radiologistas a detectar doenças com maior precisão." },
+    { title: "Novo horário de atendimento aos sábados", date: "15 Fev 2026", category: "Clínica", summary: "Agora a Med Imagem funciona também aos sábados pela manhã para sua comodidade." },
+  ];
+
   const blogPosts = [
     { title: "Preparo para ressonância magnética", slug: "preparo-ressonancia", excerpt: "Saiba tudo o que você precisa fazer antes de realizar uma ressonância magnética." },
     { title: "Quando fazer mamografia?", slug: "quando-fazer-mamografia", excerpt: "Entenda a importância da mamografia e a idade recomendada para começar." },
