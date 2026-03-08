@@ -60,8 +60,8 @@ const Index = () => {
               transition={{ duration: 0.7 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight"
             >
-              Diagnóstico por imagem com{" "}
-              <span className="text-accent">precisão e tecnologia</span> em São Mateus
+              <span className="text-accent">Precisão e tecnologia</span>{" "}
+              no diagnóstico por imagem
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
