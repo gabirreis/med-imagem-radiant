@@ -7,24 +7,23 @@
 @layer base {
   :root {
     --background: 140 18% 97%;
-    --foreground: 0 0% 27%;
+    --foreground: 0 0% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 27%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 27%;
-
+    --popover-foreground: 0 0% 20%;
     --primary: 137 45% 34%;
     --primary-foreground: 0 0% 100%;
 
     --primary-dark: 140 50% 24%;
 
     --secondary: 140 18% 93%;
-    --secondary-foreground: 0 0% 27%;
+    --secondary-foreground: 0 0% 20%;
 
     --muted: 140 10% 96%;
-    --muted-foreground: 0 0% 47%;
+    --muted-foreground: 0 0% 38%;
 
     --accent: 140 30% 91%;
     --accent-foreground: 137 45% 34%;
@@ -43,13 +42,12 @@
     --sidebar-primary: 137 45% 34%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 140 18% 93%;
-    --sidebar-accent-foreground: 0 0% 27%;
+    --sidebar-accent-foreground: 0 0% 20%;
     --sidebar-border: 140 15% 90%;
     --sidebar-ring: 137 45% 34%;
 
     /* Custom tokens */
     --surface-soft: 140 18% 93%;
-    --hero-overlay: linear-gradient(135deg, hsla(137, 45%, 34%, 0.85), hsla(140, 50%, 24%, 0.75));
     --shadow-card: 0 4px 24px -4px hsla(137, 45%, 34%, 0.08);
     --shadow-elevated: 0 12px 40px -8px hsla(137, 45%, 34%, 0.12);
   }
@@ -67,7 +65,7 @@
     --secondary: 140 18% 15%;
     --secondary-foreground: 140 10% 95%;
     --muted: 140 15% 15%;
-    --muted-foreground: 140 10% 60%;
+    --muted-foreground: 140 10% 65%;
     --accent: 140 20% 18%;
     --accent-foreground: 137 45% 45%;
     --destructive: 0 62.8% 30.6%;
