@@ -48,7 +48,6 @@
 
     /* Custom tokens */
     --surface-soft: 140 18% 93%;
-    --hero-overlay: linear-gradient(135deg, hsla(137, 45%, 34%, 0.85), hsla(140, 50%, 24%, 0.75));
     --shadow-card: 0 4px 24px -4px hsla(137, 45%, 34%, 0.08);
     --shadow-elevated: 0 12px 40px -8px hsla(137, 45%, 34%, 0.12);
   }
