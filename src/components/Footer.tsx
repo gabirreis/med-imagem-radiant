@@ -72,6 +72,17 @@ const Footer = () => {
           </div>
           <p className="text-xs text-primary-foreground/50 mt-1">Responsável Técnica: Dra Cecilia Maria de Oliveira Gonçalves – CRM 6381</p>
           <p>© {new Date().getFullYear()} Med Imagem São Mateus. Todos os direitos reservados.</p>
+          <p className="text-xs text-primary-foreground/40">
+            Desenvolvido por{" "}
+            <a
+              href="https://agenciaazulmarinho.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-100 transition-opacity underline"
+            >
+              Agência Azul Marinho
+            </a>
+          </p>
         </div>
       </div>
     </footer>
