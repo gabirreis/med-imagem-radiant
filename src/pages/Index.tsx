@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, Stethoscope, Zap, Clock, Heart, ArrowRight, FileText } from "lucide-react";
+import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
@@ -19,16 +19,16 @@ const fadeUp = {
 
 const Index = () => {
   const trustBadges = [
-    "Mais de 25 anos de experiência",
+    "28 anos de confiança",
     "Tecnologia avançada",
     "Equipe especializada",
   ];
 
   const diferenciais = [
-    { icon: Zap, title: "Tecnologia moderna", desc: "Equipamentos de última geração para diagnósticos precisos." },
-    { icon: Stethoscope, title: "Equipe especializada", desc: "Profissionais qualificados e em constante atualização." },
-    { icon: Clock, title: "Resultados rápidos", desc: "Laudos ágeis para que você tenha seu diagnóstico com rapidez." },
-    { icon: Heart, title: "Atendimento humanizado", desc: "Cuidado e acolhimento em cada etapa do seu exame." },
+    { icon: Zap, title: "Tecnologia de última geração", desc: "Equipamentos modernos que garantem mais precisão e segurança nos diagnósticos." },
+    { icon: Heart, title: "Atendimento humanizado", desc: "Aqui, cada paciente é acolhido com atenção, respeito e cuidado." },
+    { icon: Stethoscope, title: "Equipe qualificada", desc: "Profissionais experientes e comprometidos com a excelência." },
+    { icon: Star, title: "Confiança construída ao longo do tempo", desc: "28 anos sendo referência em diagnóstico por imagem na região." },
   ];
 
   const newsItems = [
@@ -60,8 +60,8 @@ const Index = () => {
               transition={{ duration: 0.7 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight"
             >
-              <span className="text-accent">Precisão e tecnologia</span>{" "}
-              no diagnóstico por imagem
+              <span className="text-accent">Prontos para o futuro</span>{" "}
+              da saúde.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -69,12 +69,20 @@ const Index = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mt-6 text-lg md:text-xl text-primary-foreground/90 leading-relaxed"
             >
-              Ressonância magnética, tomografia, ultrassonografia e raio-x com equipamentos modernos e equipe especializada.
+              Tecnologia de ponta, cuidado humanizado e 28 anos de confiança cuidando de histórias no Norte Capixaba.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.6 }}
+              className="mt-4 text-base text-primary-foreground/75 leading-relaxed"
+            >
+              Na Med Imagem, cada exame é mais do que um resultado. É parte de uma história, de um diagnóstico, de uma decisão que transforma vidas. Estamos prontos para o futuro, sem nunca deixar de cuidar do que mais importa: você.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
               className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold text-base px-8" asChild>
@@ -83,11 +91,16 @@ const Index = () => {
                   Agendar exame
                 </a>
               </Button>
+              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8" asChild>
+                <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
+                  Fale com a equipe
+                </a>
+              </Button>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
               className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               {trustBadges.map((badge) => (
@@ -101,10 +114,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Posicionamento */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-bold text-foreground"
+            >
+              O futuro da medicina diagnóstica começa aqui.
+            </motion.h2>
+            <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="mt-6 text-muted-foreground leading-relaxed text-lg"
+            >
+              Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante. Hoje, entramos em um novo ciclo — em que a tecnologia avança, mas o cuidado permanece no centro. Um ciclo em que inovação e humanização caminham juntas.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
       {/* Exames Section */}
       <section className="py-20 bg-background">
         <div className="container">
-          <SectionHeading title="Nossos exames" subtitle="Diagnósticos precisos com equipamentos de última geração e profissionais qualificados." />
+          <SectionHeading title="Exames com precisão e confiança" subtitle="Oferecemos uma estrutura completa para a realização de exames de imagem com qualidade, agilidade e segurança." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {examsData.map((exam, i) => (
               <motion.div
@@ -132,6 +172,11 @@ const Index = () => {
                 </Link>
               </motion.div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Button size="lg" asChild>
+              <Link to="/exames">Conheça nossos exames</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -162,8 +207,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Preparo */}
+      {/* Humanização */}
       <section className="py-20 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-bold text-foreground"
+            >
+              Cuidar é mais do que diagnosticar.
+            </motion.h2>
+            <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="mt-6 text-muted-foreground leading-relaxed text-lg"
+            >
+              Acreditamos que tecnologia sem cuidado não é suficiente. Por isso, nosso compromisso vai além dos exames. Está no olhar atento, na escuta, no acolhimento e na forma como cada paciente é tratado. Porque, para nós, cada história importa.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Preparo */}
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="bg-accent rounded-2xl p-10 md:p-16 text-center">
             <SectionHeading title="Orientações importantes antes do exame" subtitle="O preparo adequado é fundamental para a qualidade do seu exame. Confira as orientações específicas para cada procedimento." />
@@ -178,7 +250,7 @@ const Index = () => {
       </section>
 
       {/* Convênios */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-background">
         <div className="container">
           <SectionHeading title="Convênios atendidos" subtitle="Trabalhamos com os principais convênios da região para facilitar o seu atendimento." />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -225,10 +297,10 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Sobre a Med Imagem</h2>
               <div className="mt-4 h-1 w-16 bg-primary rounded-full" />
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                A Med Imagem atua há mais de duas décadas oferecendo exames de diagnóstico por imagem com qualidade, precisão e atendimento humanizado. Localizada em São Mateus – ES, contamos com equipamentos de última geração e uma equipe de profissionais altamente qualificados.
+                A Med Imagem nasceu com um propósito claro: levar à população do Norte Capixaba acesso a exames de imagem com qualidade, precisão e confiança. Ao longo de 28 anos, a clínica se destacou pelo pioneirismo e pela busca constante por inovação, contribuindo diretamente para a evolução da medicina diagnóstica na região.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Nossa missão é proporcionar diagnósticos precisos com o melhor atendimento, contribuindo para a saúde e bem-estar da nossa comunidade.
+                Hoje, a Med Imagem vive um novo momento — em que a experiência do paciente, a excelência técnica e a inovação caminham juntas. Estamos prontos para o futuro, e seguimos cuidando de cada história como se fosse única.
               </p>
               <Button className="mt-8" size="lg" asChild>
                 <Link to="/sobre">Conheça nossa história</Link>
@@ -239,11 +311,10 @@ const Index = () => {
       </section>
 
       {/* Notícias */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <SectionHeading title="Notícias" subtitle="Fique por dentro das novidades da Med Imagem e do mundo da saúde." />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Destaque */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -262,8 +333,6 @@ const Index = () => {
                 </div>
               </Link>
             </motion.div>
-
-            {/* Cards secundários */}
             <div className="flex flex-col gap-4">
               {newsItems.slice(1).map((item, i) => (
                 <motion.div
@@ -299,7 +368,7 @@ const Index = () => {
       </section>
 
       {/* Blog */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-background">
         <div className="container">
           <SectionHeading title="Conteúdos para sua saúde" subtitle="Informações úteis sobre exames e cuidados com a saúde." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -347,6 +416,9 @@ const Index = () => {
               </Button>
             </div>
             <p className="mt-6 text-primary-foreground/60 text-sm">(27) 3763-3366 | (27) 99868-4980</p>
+            <p className="mt-4 text-primary-foreground/50 text-sm font-medium italic">
+              Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
+            </p>
           </motion.div>
         </div>
       </section>
