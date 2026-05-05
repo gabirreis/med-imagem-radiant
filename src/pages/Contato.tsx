@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 
 const Contato = () => {
@@ -8,9 +7,11 @@ const Contato = () => {
     <Layout>
       <section className="py-16 bg-primary">
         <div className="container">
-          <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">Contato</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">
+            Estamos prontos para cuidar de você.
+          </h1>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl">
-            Entre em contato conosco para agendar seu exame ou tirar suas dúvidas.
+            Seja para agendar um exame, tirar dúvidas ou obter mais informações, nossa equipe está pronta para te atender. Entre em contato e conte com a Med Imagem para cuidar da sua saúde com tecnologia, segurança e atenção.
           </p>
         </div>
       </section>
@@ -42,6 +43,27 @@ const Contato = () => {
             ))}
           </div>
 
+          {/* CTA WhatsApp */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="mt-10 bg-primary rounded-2xl p-10 text-center"
+          >
+            <h2 className="text-2xl font-bold text-primary-foreground">Agende agora pelo WhatsApp</h2>
+            <p className="mt-3 text-primary-foreground/80">
+              Atendimento rápido e prático. Clique abaixo e fale diretamente com nossa equipe.
+            </p>
+            <a
+              href="https://wa.me/5527998684980"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 bg-primary-foreground text-primary font-semibold px-8 py-3 rounded-lg hover:bg-primary-foreground/90 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Falar pelo WhatsApp
+            </a>
+          </motion.div>
         </div>
       </section>
     </Layout>
