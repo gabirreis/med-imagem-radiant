@@ -42,7 +42,7 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <a href="https://medimagemsm.com.br/resultados" target="_blank" rel="noopener noreferrer">
+            <a href="https://web.clinux.com.br/portal/medimagemsm/resultados" target="_blank" rel="noopener noreferrer">
               Resultado de exames
             </a>
           </Button>
@@ -84,7 +84,7 @@ const Header = () => {
             ))}
             <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-border">
               <Button variant="outline" size="sm" asChild>
-                <a href="https://medimagemsm.com.br/resultados" target="_blank" rel="noopener noreferrer">
+                <a href="https://web.clinux.com.br/portal/medimagemsm/resultados" target="_blank" rel="noopener noreferrer">
                   Resultado de exames
                 </a>
               </Button>
