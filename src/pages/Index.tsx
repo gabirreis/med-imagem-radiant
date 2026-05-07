@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star } from "lucide-react";
+import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star, Cpu, HeartHandshake, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
