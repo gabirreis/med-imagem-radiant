@@ -92,7 +92,7 @@ const Index = () => {
                   Agendar exame
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-base px-8" asChild>
                 <a href="https://web.clinux.com.br/portal/medimagemsm/resultados" target="_blank" rel="noopener noreferrer">
                   Resultados de exames
                 </a>
