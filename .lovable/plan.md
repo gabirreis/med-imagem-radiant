@@ -1,5 +1,11 @@
-## Plano: Remover seção "Orientações importantes antes do exame"
+## Plano: Ajustes em Footer e CTA Agendamento
 
-Em `src/pages/Index.tsx`, remover o bloco `{/* Preparo */}` (a seção com fundo `bg-secondary` e o card `bg-accent` contendo o CTA "Ver orientações de preparo").
+### 1. Footer (`src/components/Footer.tsx`)
+Substituir o parágrafo descritivo:
+- **De:** "Há mais de 25 anos oferecendo exames de diagnóstico por imagem com qualidade, precisão e atendimento humanizado em São Mateus."
+- **Para:** "Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro."
 
-A rota `/preparo` e o link no menu/footer permanecem intactos — apenas a seção da home é removida.
+### 2. Seção "Agende seu exame" (`src/pages/Index.tsx`)
+Remover as duas linhas finais:
+- `(27) 3763-3366 | (27) 99868-4980`
+- `Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.`
