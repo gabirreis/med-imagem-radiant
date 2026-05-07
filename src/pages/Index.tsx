@@ -175,8 +175,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Exames Section */}
+      {/* Diferenciais */}
       <section className="py-20 bg-background">
+        <div className="container">
+          <SectionHeading title="Por que escolher a Med Imagem" subtitle="Compromisso com excelência em cada detalhe do seu atendimento." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {diferenciais.map((item, i) => (
+              <motion.div
+                key={item.title}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-card rounded-lg p-8 text-center shadow-card hover:shadow-elevated transition-shadow"
+              >
+                <div className="w-14 h-14 mx-auto rounded-full bg-accent flex items-center justify-center mb-4">
+                  <item.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Exames Section */}
+      <section className="py-20 bg-secondary">
         <div className="container">
           <SectionHeading title="Exames com precisão e confiança" subtitle="Oferecemos uma estrutura completa para a realização de exames de imagem com qualidade, agilidade e segurança." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -211,32 +237,6 @@ const Index = () => {
             <Button size="lg" asChild>
               <Link to="/exames">Conheça nossos exames</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Diferenciais */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <SectionHeading title="Por que escolher a Med Imagem" subtitle="Compromisso com excelência em cada detalhe do seu atendimento." />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {diferenciais.map((item, i) => (
-              <motion.div
-                key={item.title}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-lg p-8 text-center shadow-card hover:shadow-elevated transition-shadow"
-              >
-                <div className="w-14 h-14 mx-auto rounded-full bg-accent flex items-center justify-center mb-4">
-                  <item.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
