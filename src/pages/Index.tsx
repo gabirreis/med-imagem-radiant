@@ -274,7 +274,7 @@ const Index = () => {
       </section>
 
       {/* Sobre */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -283,7 +283,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src={clinicExterior} alt="Clínica Med Imagem São Mateus" className="rounded-2xl shadow-elevated w-full" />
+              <img src={clinicExterior} alt="Clínica Med Imagem São Mateus" className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -308,7 +308,7 @@ const Index = () => {
       </section>
 
       {/* Notícias */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-background">
         <div className="container">
           <SectionHeading title="Notícias" subtitle="Fique por dentro das novidades da Med Imagem e do mundo da saúde." />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
