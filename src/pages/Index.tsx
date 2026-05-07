@@ -256,7 +256,7 @@ const Index = () => {
               <img
                 src={humanizacaoImg}
                 alt="Profissional da Med Imagem acolhendo paciente em sala de exame"
-                className="rounded-2xl shadow-elevated w-full aspect-[4/5] object-cover"
+                className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover"
               />
             </motion.div>
             <motion.div
