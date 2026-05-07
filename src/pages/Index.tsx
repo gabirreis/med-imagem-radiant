@@ -7,6 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { examsData } from "@/data/exams";
 import heroBg from "@/assets/hero-bg.jpg";
 import clinicExterior from "@/assets/clinic-exterior.jpg";
+import humanizacaoImg from "@/assets/humanizacao.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -244,26 +245,35 @@ const Index = () => {
       {/* Humanização */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-foreground"
+              className="order-1 lg:order-1"
             >
-              Cuidar é mais do que diagnosticar.
-            </motion.h2>
-            <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              <img
+                src={humanizacaoImg}
+                alt="Mãe e filha em momento de carinho — atendimento humanizado Med Imagem"
+                className="rounded-2xl shadow-elevated w-full aspect-[4/5] object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mt-6 text-muted-foreground leading-relaxed text-lg"
+              transition={{ duration: 0.6 }}
+              className="order-2 lg:order-2 text-center lg:text-left"
             >
-              Acreditamos que tecnologia sem cuidado não é suficiente. Por isso, nosso compromisso vai além dos exames. Está no olhar atento, na escuta, no acolhimento e na forma como cada paciente é tratado. Porque, para nós, cada história importa.
-            </motion.p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Cuidar é mais do que diagnosticar.
+              </h2>
+              <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto lg:mx-0" />
+              <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
+                Acreditamos que tecnologia sem cuidado não é suficiente. Por isso, nosso compromisso vai além dos exames. Está no olhar atento, na escuta, no acolhimento e na forma como cada paciente é tratado. Porque, para nós, cada história importa.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
