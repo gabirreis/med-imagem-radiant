@@ -278,21 +278,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Preparo */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="bg-accent rounded-2xl p-10 md:p-16 text-center">
-            <SectionHeading title="Orientações importantes antes do exame" subtitle="O preparo adequado é fundamental para a qualidade do seu exame. Confira as orientações específicas para cada procedimento." />
-            <Button size="lg" asChild>
-              <Link to="/preparo">
-                <FileText className="w-5 h-5 mr-2" />
-                Ver orientações de preparo
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Convênios */}
       <section className="py-20 bg-background">
         <div className="container">
