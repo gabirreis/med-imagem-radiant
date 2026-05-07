@@ -1,23 +1,17 @@
-## Plano: Adicionar imagem à seção "Cuidar é mais do que diagnosticar"
+## Plano: Substituir imagem da seção "Cuidar é mais do que diagnosticar"
 
-### 1. Asset
-- Copiar `user-uploads://image.png` para `src/assets/humanizacao.jpg` (renomeando para refletir o contexto: acolhimento/humanização).
-- Importar no `src/pages/Index.tsx`.
+A imagem atual (`src/assets/humanizacao.jpg`) mostra uma mãe e filha em casa — emocional, mas não conecta com o contexto clínico.
 
-### 2. Layout proposto: split 2 colunas (imagem + texto)
+### Ação
+Gerar nova imagem via IA mantendo a **mesma linha visual** (humana, acolhedora, luz suave, paleta neutra/clara) mas adequada ao site de clínica de diagnóstico por imagem.
 
-Substituir o layout atual centralizado por um grid `lg:grid-cols-2` com gap generoso:
+### Conceito da nova imagem
+Cena de acolhimento clínico: uma profissional de saúde (jaleco branco/verde claro) em interação calorosa com um paciente — sorriso genuíno, mão no ombro ou recepcionando. Ambiente clínico moderno e claro, fora de foco no fundo. Luz natural suave, paleta neutra com toques de verde institucional. Estilo fotográfico realista, editorial, sem estética de banco de imagens datado.
 
-- **Coluna esquerda (imagem)**: foto em `rounded-2xl shadow-elevated`, `aspect-[4/5]` ou altura natural, com leve animação `slide-in` da esquerda.
-- **Coluna direita (texto)**: título "Cuidar é mais do que diagnosticar.", barra accent, e o parágrafo — alinhados à esquerda, com animação `slide-in` da direita.
-
-No mobile (`<lg`): a imagem aparece acima do texto, ambos centralizados.
-
-### 3. Detalhes visuais
-- Manter `bg-background` da seção e padding `py-20`.
-- Container interno `max-w-6xl mx-auto`.
-- Imagem com `object-cover` para enquadrar bem o abraço.
-- Alt descritivo: "Mãe e filha em momento de carinho — atendimento humanizado Med Imagem".
-
-### Por que esse layout
-A seção atual é puramente textual e curta. Trazer uma imagem emocional ao lado do texto reforça visualmente o conceito de "cuidado humanizado", cria ritmo na página (quebra a sequência de seções centralizadas) e evita repetir o padrão da seção "Sobre" (que também usa split, mas com foto da clínica — aqui o foco é pessoa/emoção, não estrutura).
+### Especificações técnicas
+- Modelo: `imagegen--generate_image` (standard)
+- Aspecto: vertical `4:5` (igual ao layout atual `aspect-[4/5]`)
+- Dimensões: 1024x1280
+- Salvar em: `src/assets/humanizacao.jpg` (sobrescrevendo)
+- Atualizar o `alt` em `src/pages/Index.tsx` para descrever a nova cena
+- Nenhuma alteração de layout necessária
