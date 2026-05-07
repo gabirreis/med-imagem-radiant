@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <img src={logoHorizontal} alt="Med Imagem" className="h-10 brightness-0 invert" />
             <p className="text-sm opacity-80 leading-relaxed">
-              Há mais de 25 anos oferecendo exames de diagnóstico por imagem com qualidade, precisão e atendimento humanizado em São Mateus.
+              Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
             </p>
           </div>
 
