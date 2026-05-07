@@ -1,15 +1,11 @@
-## Página Sobre — ajustes
+**Diagnóstico:** O `Button variant="outline"` tem `bg-background` (branco) embutido. Sobre o fundo verde do Hero, isso faz o botão ficar com fundo branco e texto branco (`text-primary-foreground`) — praticamente ilegível.
 
-### 1. Imagem principal
-Padronizar a imagem da seção "História principal" com o mesmo padrão da home: `rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover`.
+**Correção em `src/pages/Index.tsx`** (CTA "Resultados de exames" do Hero):
 
-### 2. Reorganizar os 4 tópicos da timeline com imagens
-A seção "Linha do tempo" hoje renderiza 4 cards apenas com texto. Vou transformar em um layout alternado (imagem/texto, texto/imagem, imagem/texto, texto/imagem) — padrão "zig-zag" — onde cada um dos 4 tópicos terá uma imagem ilustrativa ao lado.
+Trocar `variant="outline"` por um botão transparente sobre o hero. Adicionar `bg-transparent` para anular o fundo da variante outline e manter borda/hover já existentes:
 
-**Imagens a gerar** (4 novas, salvas em `src/assets/`):
-- `sobre-primeiros-passos.jpg` — fachada antiga / estabelecimento dos médicos fundadores, tom histórico
-- `sobre-evolucao.jpg` — equipamento moderno de diagnóstico, simbolizando evolução tecnológica
-- `sobre-o-que-nos-move.jpg` — equipe médica acolhendo paciente, atendimento humanizado
-- `sobre-hoje.jpg` — recepção/interior moderno da clínica, ambiente atual
+```
+className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-base px-8"
+```
 
-**Layout de cada tópico**: grid 2 colunas em `lg`, com imagem `rounded-2xl shadow-elevated aspect-[4/3] object-cover w-full max-w-md`, alternando ordem com `lg:order-1` / `lg:order-2`. Manter título em destaque (primary) + texto + barra accent. Animação `fadeUp` mantida.
+Isso entrega o padrão de "ghost button outline sobre hero": transparente, borda branca espessa, e no hover inverte para fundo branco/texto verde — alinhado ao design system (usa apenas tokens `primary` / `primary-foreground`).
