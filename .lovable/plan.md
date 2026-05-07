@@ -1,41 +1,26 @@
+## Plano: Reestruturar seção "O futuro da medicina diagnóstica começa aqui"
 
+Em `src/pages/Index.tsx`, na seção "Posicionamento":
 
-## Plano: Refinar design system
+### 1. Substituir o parágrafo atual por dois parágrafos
 
-### 1. Acessibilidade — `src/index.css`
+- **Parágrafo 1:** "Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante."
+- **Parágrafo 2 (destacado):** "Hoje, entramos em um novo ciclo."
 
-**Light mode (`:root`):**
-- Linha 10: `--foreground: 0 0% 27%` → `0 0% 20%`
-- Linha 13: `--card-foreground: 0 0% 27%` → `0 0% 20%`
-- Linha 16: `--popover-foreground: 0 0% 27%` → `0 0% 20%`
-- Linha 24: `--secondary-foreground: 0 0% 27%` → `0 0% 20%`
-- Linha 27: `--muted-foreground: 0 0% 47%` → `0 0% 38%`
-- Linha 46: `--sidebar-accent-foreground: 0 0% 27%` → `0 0% 20%`
+### 2. Adicionar 3 blocos em grid (md:grid-cols-3) abaixo dos parágrafos
 
-**Dark mode (`.dark`):** ajuste proporcional
-- Linha 70: `--muted-foreground: 140 10% 60%` → `140 10% 65%` (aumentar luminosidade para melhor contraste em fundo escuro)
+Cada bloco terá um ícone do `lucide-react` em círculo (estilo similar ao da seção "Diferenciais"), com o texto correspondente:
 
-### 2. Bug do `--hero-overlay`
-
-A variável está definida mas **nunca é usada** em nenhum componente — o hero já usa classes Tailwind (`bg-gradient-to-r`). Ação: **remover** a linha `--hero-overlay` do `:root` para evitar confusão futura e eliminar o risco de uso incorreto via `hsl()`.
-
-### 3. Dark mode — `tailwind.config.ts`
-
-- Linha 5: alterar `darkMode: ["class"]` para `darkMode: "media"`
-
-### 4. Tipografia — verificação
-
-A configuração atual já está correta:
-- `body` aplica `font-body` (Inter) via `@layer base`
-- `h1–h6` aplicam `font-heading` (Poppins) via `@layer base`
-- Google Fonts importadas no topo do `index.css`
-
-Nenhuma alteração necessária neste item — já está implementado corretamente.
-
-### Arquivos alterados
-
-| Arquivo | Alteração |
+| Ícone | Texto |
 |---|---|
-| `src/index.css` | Ajustar tokens de foreground/muted-foreground, remover `--hero-overlay` |
-| `tailwind.config.ts` | `darkMode: "media"` |
+| `Cpu` | Um ciclo em que a tecnologia avança, mas o cuidado permanece no centro. |
+| `HeartHandshake` | Um ciclo em que inovação e humanização caminham juntas. |
+| `Rocket` | Um ciclo em que estamos, mais do que nunca, prontos para o futuro. |
 
+### Detalhes técnicos
+
+- Importar `Cpu`, `HeartHandshake`, `Rocket` de `lucide-react`.
+- Manter fundo `bg-secondary` da seção.
+- Cards com `bg-card`, `rounded-lg`, `shadow-card`, ícone em círculo `bg-accent` com `text-primary` (consistente com a seção "Por que escolher a Med Imagem").
+- Animação `fadeUp` com stagger nos 3 blocos.
+- Ampliar `max-w-3xl` para `max-w-5xl` no container interno para acomodar o grid.

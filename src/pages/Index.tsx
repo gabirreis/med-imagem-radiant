@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star } from "lucide-react";
+import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star, Cpu, HeartHandshake, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
@@ -117,26 +117,60 @@ const Index = () => {
       {/* Posicionamento */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-foreground"
-            >
-              O futuro da medicina diagnóstica começa aqui.
-            </motion.h2>
-            <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mt-6 text-muted-foreground leading-relaxed text-lg"
-            >
-              Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante. Hoje, entramos em um novo ciclo — em que a tecnologia avança, mas o cuidado permanece no centro. Um ciclo em que inovação e humanização caminham juntas.
-            </motion.p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-3xl md:text-4xl font-bold text-foreground"
+              >
+                O futuro da medicina diagnóstica começa aqui.
+              </motion.h2>
+              <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="mt-6 text-muted-foreground leading-relaxed text-lg"
+              >
+                Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="mt-4 text-foreground font-semibold text-xl md:text-2xl"
+              >
+                Hoje, entramos em um novo ciclo.
+              </motion.p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: Cpu, text: "Um ciclo em que a tecnologia avança, mas o cuidado permanece no centro." },
+                { icon: HeartHandshake, text: "Um ciclo em que inovação e humanização caminham juntas." },
+                { icon: Rocket, text: "Um ciclo em que estamos, mais do que nunca, prontos para o futuro." },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.text}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="bg-card rounded-lg p-8 text-center shadow-card hover:shadow-elevated transition-shadow"
+                >
+                  <div className="w-14 h-14 mx-auto rounded-full bg-accent flex items-center justify-center mb-4">
+                    <item.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <p className="text-base text-foreground leading-relaxed">{item.text}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
