@@ -137,16 +137,7 @@ const Index = () => {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="mt-6 text-muted-foreground leading-relaxed text-lg"
               >
-                Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="mt-4 text-foreground font-semibold text-xl md:text-2xl"
-              >
-                Hoje, entramos em um novo ciclo.
+                Ao longo de quase três décadas, a Med Imagem construiu uma trajetória baseada em precisão, confiança e evolução constante. Hoje, entramos em um novo ciclo.
               </motion.p>
             </div>
 
