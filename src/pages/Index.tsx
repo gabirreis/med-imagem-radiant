@@ -278,33 +278,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Convênios */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <SectionHeading title="Convênios atendidos" subtitle="Trabalhamos com os principais convênios da região para facilitar o seu atendimento." />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {["Unimed", "Amil", "Bradesco Saúde", "SulAmérica", "Hapvida", "São Bernardo", "MedSênior", "Assim Saúde", "Cassi", "PASA", "Petrobras", "Vale"].map((conv, i) => (
-              <motion.div
-                key={conv}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-lg p-4 flex items-center justify-center h-20 shadow-card text-sm font-medium text-muted-foreground"
-              >
-                {conv}
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/convenios">Ver lista completa</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Sobre */}
       <section className="py-20 bg-background">
         <div className="container">
