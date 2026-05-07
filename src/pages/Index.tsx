@@ -92,11 +92,6 @@ const Index = () => {
                   Agendar exame
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8" asChild>
-                <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer">
-                  Fale com a equipe
-                </a>
-              </Button>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
