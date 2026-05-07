@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import clinicExterior from "@/assets/clinic-exterior.jpg";
+import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
+import sobreEvolucao from "@/assets/sobre-evolucao.jpg";
+import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
+import sobreHoje from "@/assets/sobre-hoje.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -38,7 +41,7 @@ const Sobre = () => {
               transition={{ duration: 0.6 }}
               src={clinicExterior}
               alt="Clínica Med Imagem"
-              className="rounded-2xl shadow-elevated w-full"
+              className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover"
             />
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -76,43 +79,65 @@ const Sobre = () => {
 
       {/* Linha do tempo / Os primeiros passos */}
       <section className="py-16 bg-secondary">
-        <div className="container max-w-4xl">
-          <div className="space-y-10">
+        <div className="container max-w-6xl">
+          <div className="space-y-16">
             {[
               {
                 titulo: "Os primeiros passos",
                 texto:
                   "Em 1998, os médicos Dr. José Luiz Silva Neves, neurocirurgião, e Dr. Jorge Silva, urologista, uniram conhecimento e visão para transformar a realidade da saúde na região. A proposta era ousada para a época: trazer tecnologia de ponta para São Mateus e oferecer diagnósticos mais assertivos, sem a necessidade de deslocamento para outros estados. Assim nasceu a Med Imagem — com uma visão clara de futuro e um compromisso inegociável com a qualidade.",
+                imagem: sobrePrimeirosPassos,
+                alt: "Fachada histórica de clínica médica",
               },
               {
                 titulo: "Uma trajetória de evolução constante",
                 texto:
                   "Desde os primeiros anos, a clínica se destacou pelo investimento contínuo em tecnologia e pela formação de uma equipe altamente qualificada. Ao longo dessa trajetória, a Med Imagem não apenas acompanhou a evolução da medicina diagnóstica, mas foi protagonista dela na região. Foram décadas de crescimento, desafios superados e de entrega de diagnósticos com alto nível de precisão, contribuindo diretamente para decisões médicas mais seguras e para a qualidade de vida de milhares de pessoas.",
+                imagem: sobreEvolucao,
+                alt: "Equipamento moderno de ressonância magnética",
               },
               {
                 titulo: "O que nos move",
                 texto:
                   "Mais do que tecnologia, o que sustenta a Med Imagem é o compromisso com o cuidado integral do paciente. A gestão administrativa, a diretoria médica e toda a equipe compartilham um mesmo propósito: fazer sempre melhor. A busca por capacitação contínua, o investimento em desenvolvimento humano e o foco no atendimento acolhedor fazem parte da essência da clínica. O atendimento humanizado não é apenas um diferencial — é uma escolha diária.",
+                imagem: sobreOQueNosMove,
+                alt: "Médica acolhendo paciente",
               },
               {
                 titulo: "Med Imagem hoje",
                 texto:
                   "Hoje, a Med Imagem é referência em diagnóstico por imagem, com um parque tecnológico moderno e uma equipe preparada para atender com excelência, precisão e sensibilidade. Cada exame realizado carrega uma responsabilidade. Cada paciente, uma história única. E é com esse entendimento que seguimos evoluindo.",
+                imagem: sobreHoje,
+                alt: "Recepção moderna da clínica Med Imagem",
               },
-            ].map((item, i) => (
-              <motion.div
-                key={item.titulo}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-xl p-8 shadow-card border-l-4 border-primary"
-              >
-                <h3 className="text-xl font-bold text-primary mb-3">{item.titulo}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.texto}</p>
-              </motion.div>
-            ))}
+            ].map((item, i) => {
+              const imageFirst = i % 2 === 0;
+              return (
+                <motion.div
+                  key={item.titulo}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+                >
+                  <img
+                    src={item.imagem}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={1024}
+                    height={768}
+                    className={`rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover ${imageFirst ? "lg:order-1" : "lg:order-2"}`}
+                  />
+                  <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">{item.titulo}</h3>
+                    <div className="mt-3 h-1 w-16 bg-primary rounded-full" />
+                    <p className="mt-5 text-muted-foreground leading-relaxed">{item.texto}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
