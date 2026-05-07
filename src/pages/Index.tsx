@@ -444,10 +444,6 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <p className="mt-6 text-primary-foreground/60 text-sm">(27) 3763-3366 | (27) 99868-4980</p>
-            <p className="mt-4 text-primary-foreground/50 text-sm font-medium italic">
-              Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
-            </p>
           </motion.div>
         </div>
       </section>
