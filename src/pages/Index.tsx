@@ -272,32 +272,40 @@ const Index = () => {
       {/* Sobre */}
       <section className="py-20 bg-secondary">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="order-1 lg:order-1"
             >
-              <img src={clinicExterior} alt="Clínica Med Imagem São Mateus" className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover" />
+              <img
+                src={clinicExterior}
+                alt="Clínica Med Imagem São Mateus"
+                className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover"
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="order-2 lg:order-2 text-center lg:text-left"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Sobre a Med Imagem</h2>
-              <div className="mt-4 h-1 w-16 bg-primary rounded-full" />
-              <p className="mt-6 text-muted-foreground leading-relaxed">
+              <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto lg:mx-0" />
+              <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
                 A Med Imagem nasceu com um propósito claro: levar à população do Norte Capixaba acesso a exames de imagem com qualidade, precisão e confiança. Ao longo de 28 anos, a clínica se destacou pelo pioneirismo e pela busca constante por inovação, contribuindo diretamente para a evolução da medicina diagnóstica na região.
               </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-muted-foreground leading-relaxed text-lg">
                 Hoje, a Med Imagem vive um novo momento — em que a experiência do paciente, a excelência técnica e a inovação caminham juntas. Estamos prontos para o futuro, e seguimos cuidando de cada história como se fosse única.
               </p>
-              <Button className="mt-8" size="lg" asChild>
-                <Link to="/sobre">Conheça nossa história</Link>
-              </Button>
+              <div className="mt-8 flex justify-center lg:justify-start">
+                <Button size="lg" asChild>
+                  <Link to="/sobre">Conheça nossa história</Link>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </div>
