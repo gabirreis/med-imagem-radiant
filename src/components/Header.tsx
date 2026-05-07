@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex-shrink-0">
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0">
           <img src={logoHorizontal} alt="Med Imagem São Mateus" className="h-10 md:h-12" />
         </Link>
 
