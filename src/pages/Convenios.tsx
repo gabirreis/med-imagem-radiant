@@ -5,9 +5,14 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 
 const convenios = [
-  "Unimed", "Amil", "Bradesco Saúde", "SulAmérica", "Hapvida", "São Bernardo",
-  "MedSênior", "Assim Saúde", "Cassi", "PASA", "Petrobras", "Vale",
-  "Geap", "Postal Saúde", "Fundação Saúde Itaú", "Eletros", "Saúde Caixa", "Capesaúde",
+  "AMBEP", "AMIL", "BANESCAIXA", "BEST SENIOR", "BRADESCO", "CAPE SAÚDE",
+  "CAPITAL PREV – CESAN", "CARTÃO DE TODOS", "CASSI", "COMPARTILHE SAÚDE",
+  "ECONOMIC", "EPHARMA", "EXCELÊNCIA – MERIDIONAL SAÚDE", "MAIS SAÚDE MONTANHA",
+  "MEDSEMPRE", "NOVA SAÚDE", "OAB – CAAES", "PAX VIDA", "PETROBRAS",
+  "POSTAL SAÚDE", "RHMED", "RIO DOCE SAÚDE", "SAMP", "SÃO BERNARDO",
+  "SAUDE CAIXA", "SELECT OPERADORA", "SEPACO", "SIND EMPRESA",
+  "SINDICATO RURAL DE JAGUARE", "SINDICATO RURAL DE SÃO MATEUS",
+  "TECNOSEG", "UNIMED",
 ];
 
 const Convenios = () => {
