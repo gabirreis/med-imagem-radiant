@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { examsData } from "@/data/exams";
-import heroBg from "@/assets/hero-bg.jpg";
-import clinicExterior from "@/assets/clinic-exterior.jpg";
+import heroBg from "@/assets/hero-bg.webp";
+import clinicExterior from "@/assets/clinic-exterior.webp";
 import humanizacaoImg from "@/assets/humanizacao.jpg";
 
 const fadeUp = {

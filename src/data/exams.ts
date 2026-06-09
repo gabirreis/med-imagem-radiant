@@ -1,6 +1,6 @@
-import examUltrassom from "@/assets/exam-ultrassom.jpg";
-import examRessonancia from "@/assets/exam-ressonancia.jpg";
-import examRaiox from "@/assets/exam-raiox.jpg";
+import examUltrassom from "@/assets/exam-ultrassom.webp";
+import examRessonancia from "@/assets/exam-ressonancia.webp";
+import examRaiox from "@/assets/exam-raiox.webp";
 import examTomografia from "@/assets/exam-tomografia.jpg";
 import examMamografia from "@/assets/exam-mamografia.jpg";
 
