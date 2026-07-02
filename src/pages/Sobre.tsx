@@ -5,7 +5,7 @@ import clinicExterior from "@/assets/clinic-exterior.webp";
 import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
 import sobreEvolucao from "@/assets/sobre-evolucao.jpg";
 import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
-import sobreHoje from "@/assets/sobre-hoje.jpg";
+import sobreHoje from "@/assets/sobre-hoje.webp.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
