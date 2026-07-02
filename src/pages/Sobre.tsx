@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import clinicExterior from "@/assets/clinic-exterior.webp";
 import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
-import sobreEvolucao from "@/assets/sobre-evolucao.jpg";
+import evolucaoConstante from "@/assets/evolucao-constante.webp.asset.json";
 import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
 import sobreHoje from "@/assets/sobre-hoje.webp.asset.json";
 
