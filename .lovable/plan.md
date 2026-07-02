@@ -1,24 +1,28 @@
-# Substituir imagem do bloco "Med Imagem hoje" na página Sobre
+Plano para substituir a imagem da seção "Uma trajetória de evolução constante" na página Sobre.
 
 ## Contexto
-Na página `/sobre`, o bloco **"Med Imagem hoje"** (linha 107-112 de `src/pages/Sobre.tsx`) exibe atualmente `src/assets/sobre-hoje.jpg`, com alt text "Recepção moderna da Med Imagem". O usuário enviou a foto real da recepcionista da clínica (`CUIDAR_É_MAIS_QUE_DIAGNOSTICAR.webp`) para substituir essa imagem.
+- A seção "Uma trajetória de evolução constante" em `src/pages/Sobre.tsx` usa atualmente `src/assets/sobre-evolucao.jpg`.
+- A nova imagem enviada (`EVOLUCAOCONSTANTE.webp`) mostra um equipamento de ressonância magnética Philips em ambiente clínico moderno, alinhada ao tema de evolução tecnológica.
 
-## O que será feito
+## Passos
 
-### 1. Publicar a nova imagem como asset
-Usar o CLI `lovable-assets` a partir do upload em `/mnt/user-uploads/`:
-- Origem: `CUIDAR_É_MAIS_QUE_DIAGNOSTICAR.webp`
-- Destino do pointer: `src/assets/sobre-hoje.webp.asset.json`
-- Manter o filename original `sobre-hoje.webp` no CDN para consistência com o contexto da página.
+1. **Publicar novo asset no CDN**
+   - Executar `lovable-assets create` a partir de `/mnt/user-uploads/EVOLUCAOCONSTANTE.webp`.
+   - Salvar o ponteiro em `src/assets/evolucao-constante.webp.asset.json`.
 
-### 2. Atualizar `src/pages/Sobre.tsx`
-- Substituir o import `sobreHoje from "@/assets/sobre-hoje.jpg"` por import do pointer `.asset.json`.
-- No item do array `Med Imagem hoje`, usar `sobreHoje.url` no campo `imagem`.
-- Ajustar o `alt` para descrever a nova imagem (ex.: "Recepcionista da Med Imagem pronta para atender").
-- Manter classes, dimensões (`aspect-[4/3]`, `max-w-md`) e efeitos de animação inalterados.
+2. **Atualizar `src/pages/Sobre.tsx`**
+   - Remover o import `import sobreEvolucao from "@/assets/sobre-evolucao.jpg"`.
+   - Adicionar `import evolucaoConstante from "@/assets/evolucao-constante.webp.asset.json"`.
+   - No item "Uma trajetória de evolução constante" do array da linha do tempo, trocar `imagem: sobreEvolucao` para `imagem: evolucaoConstante.url`.
+   - Atualizar o `alt` para algo descritivo, ex.: "Ressonância magnética Philips de alta tecnologia na Med Imagem".
 
-### 3. Limpar asset antigo
-- Remover `src/assets/sobre-hoje.jpg` do repositório, pois deixará de ser referenciado.
+3. **Remover asset antigo do repositório**
+   - Deletar `src/assets/sobre-evolucao.jpg`, pois não possui outras referências no projeto.
 
-## Resultado esperado
-A seção "Med Imagem hoje" passa a exibir a foto real da recepcionista no balcão da clínica, com carregamento otimizado via CDN e sem duplicar assets binários no repo.
+4. **Validar**
+   - Rodar `bun run build` para garantir que imports e tipagens estão corretos.
+   - Verificar visualmente a seção no preview.
+
+## Resumo
+
+Substituir a imagem estática `sobre-evolucao.jpg` pela imagem real enviada do equipamento de ressonância magnética, publicada via CDN como `evolucao-constante.webp`, e atualizar a referência na página `/sobre`.

@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import clinicExterior from "@/assets/clinic-exterior.webp";
 import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
-import sobreEvolucao from "@/assets/sobre-evolucao.jpg";
+import evolucaoConstante from "@/assets/evolucao-constante.webp.asset.json";
 import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
 import sobreHoje from "@/assets/sobre-hoje.webp.asset.json";
 
@@ -93,8 +93,8 @@ const Sobre = () => {
                 titulo: "Uma trajetória de evolução constante",
                 texto:
                   "Desde os primeiros anos, a clínica se destacou pelo investimento contínuo em tecnologia e pela formação de uma equipe altamente qualificada. Ao longo dessa trajetória, a Med Imagem não apenas acompanhou a evolução da medicina diagnóstica, mas foi protagonista dela na região. Foram décadas de crescimento, desafios superados e de entrega de diagnósticos com alto nível de precisão, contribuindo diretamente para decisões médicas mais seguras e para a qualidade de vida de milhares de pessoas.",
-                imagem: sobreEvolucao,
-                alt: "Equipamento moderno de ressonância magnética",
+                imagem: evolucaoConstante.url,
+                alt: "Ressonância magnética Philips de alta tecnologia na Med Imagem",
               },
               {
                 titulo: "O que nos move",
