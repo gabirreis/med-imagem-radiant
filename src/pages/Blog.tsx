@@ -62,25 +62,25 @@ const Blog = () => {
         </div>
       </section>
       <section className="py-16 bg-background">
-        <div className="container max-w-4xl space-y-10">
+        <div className="container max-w-3xl divide-y divide-border">
           {blogPosts.map((post, i) => (
             <motion.article
               key={post.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
-              className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow"
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+              className="flex gap-5 py-8 items-start group"
             >
-              <div className="aspect-[16/7] overflow-hidden">
+              <div className="w-32 h-22 flex-shrink-0 rounded-lg overflow-hidden" style={{ height: "88px" }}>
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-8">
-                <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-accent px-3 py-1 rounded-full">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-accent px-2.5 py-0.5 rounded-full">
                     <Tag className="w-3 h-3" />
                     {post.category}
                   </span>
@@ -89,16 +89,18 @@ const Blog = () => {
                     {post.date}
                   </span>
                 </div>
-                <h2 className="text-2xl font-bold text-foreground leading-tight">{post.title}</h2>
-                <p className="mt-3 text-muted-foreground leading-relaxed">{post.excerpt}</p>
-                <div className="mt-6 space-y-3 text-muted-foreground leading-relaxed text-sm border-t border-border pt-6">
-                  {post.content.map((paragraph, j) => (
-                    <p key={j}>{paragraph}</p>
-                  ))}
-                  {post.credit && (
-                    <p className="text-xs text-muted-foreground/60 italic mt-4">{post.credit}</p>
-                  )}
-                </div>
+                <h2 className="text-base font-semibold text-foreground leading-snug mb-2">{post.title}</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{post.excerpt}</p>
+                {post.content.length > 0 && (
+                  <div className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed border-t border-border pt-4">
+                    {post.content.map((paragraph, j) => (
+                      <p key={j}>{paragraph}</p>
+                    ))}
+                    {post.credit && (
+                      <p className="text-xs text-muted-foreground/50 italic mt-3">{post.credit}</p>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.article>
           ))}
