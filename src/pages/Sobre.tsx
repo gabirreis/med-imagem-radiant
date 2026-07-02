@@ -5,7 +5,7 @@ import clinicExterior from "@/assets/clinic-exterior.webp";
 import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
 import sobreEvolucao from "@/assets/sobre-evolucao.jpg";
 import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
-import sobreHoje from "@/assets/sobre-hoje.jpg";
+import sobreHoje from "@/assets/sobre-hoje.webp.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -107,8 +107,8 @@ const Sobre = () => {
                 titulo: "Med Imagem hoje",
                 texto:
                   "Hoje, a Med Imagem é referência em diagnóstico por imagem, com um parque tecnológico moderno e uma equipe preparada para atender com excelência, precisão e sensibilidade. Cada exame realizado carrega uma responsabilidade. Cada paciente, uma história única. E é com esse entendimento que seguimos evoluindo.",
-                imagem: sobreHoje,
-                alt: "Recepção moderna da clínica Med Imagem",
+                imagem: sobreHoje.url,
+                alt: "Recepcionista da Med Imagem pronta para atender",
               },
             ].map((item, i) => {
               const imageFirst = i % 2 === 0;

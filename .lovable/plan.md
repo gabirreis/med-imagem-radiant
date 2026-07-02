@@ -1,21 +1,24 @@
-# Atualizar imagens de Mamografia e Tomografia
+# Substituir imagem do bloco "Med Imagem hoje" na página Sobre
 
-Substituir as imagens dos exames de **Mamografia** e **Tomografia Computadorizada** pelas fotos reais dos equipamentos da clínica (uploads do usuário).
+## Contexto
+Na página `/sobre`, o bloco **"Med Imagem hoje"** (linha 107-112 de `src/pages/Sobre.tsx`) exibe atualmente `src/assets/sobre-hoje.jpg`, com alt text "Recepção moderna da Med Imagem". O usuário enviou a foto real da recepcionista da clínica (`CUIDAR_É_MAIS_QUE_DIAGNOSTICAR.webp`) para substituir essa imagem.
 
-## Passos
+## O que será feito
 
-1. Publicar as duas imagens via `lovable-assets` a partir do mount `/mnt/user-uploads/`:
-   - `MAMOGRAFIA.webp` → `src/assets/exam-mamografia.webp.asset.json`
-   - `TOMOGRAFIA.webp` → `src/assets/exam-tomografia.webp.asset.json`
-2. Atualizar `src/data/exams.ts`:
-   - Trocar os imports antigos (`exam-mamografia.jpg`, `exam-tomografia.jpg`) pelos novos pointers `.asset.json`
-   - Usar `.url` do pointer no campo `image` de cada exame
-3. Manter todos os outros campos (nome, descrição, preparo) inalterados
+### 1. Publicar a nova imagem como asset
+Usar o CLI `lovable-assets` a partir do upload em `/mnt/user-uploads/`:
+- Origem: `CUIDAR_É_MAIS_QUE_DIAGNOSTICAR.webp`
+- Destino do pointer: `src/assets/sobre-hoje.webp.asset.json`
+- Manter o filename original `sobre-hoje.webp` no CDN para consistência com o contexto da página.
 
-As imagens antigas continuam nos assets do projeto, mas deixam de ser referenciadas — sem impacto no bundle.
+### 2. Atualizar `src/pages/Sobre.tsx`
+- Substituir o import `sobreHoje from "@/assets/sobre-hoje.jpg"` por import do pointer `.asset.json`.
+- No item do array `Med Imagem hoje`, usar `sobreHoje.url` no campo `imagem`.
+- Ajustar o `alt` para descrever a nova imagem (ex.: "Recepcionista da Med Imagem pronta para atender").
+- Manter classes, dimensões (`aspect-[4/3]`, `max-w-md`) e efeitos de animação inalterados.
 
-## Onde aparece automaticamente
-- Home (grid de exames)
-- Página `/exames`
-- Páginas individuais `/mamografia` e `/tomografia`
-- Sidebar "Outros exames"
+### 3. Limpar asset antigo
+- Remover `src/assets/sobre-hoje.jpg` do repositório, pois deixará de ser referenciado.
+
+## Resultado esperado
+A seção "Med Imagem hoje" passa a exibir a foto real da recepcionista no balcão da clínica, com carregamento otimizado via CDN e sem duplicar assets binários no repo.
