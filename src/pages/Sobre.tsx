@@ -107,7 +107,7 @@ const Sobre = () => {
                 titulo: "Med Imagem hoje",
                 texto:
                   "Hoje, a Med Imagem é referência em diagnóstico por imagem, com um parque tecnológico moderno e uma equipe preparada para atender com excelência, precisão e sensibilidade. Cada exame realizado carrega uma responsabilidade. Cada paciente, uma história única. E é com esse entendimento que seguimos evoluindo.",
-                imagem: sobreHoje,
+                imagem: sobreHoje.url,
                 alt: "Recepção moderna da clínica Med Imagem",
               },
             ].map((item, i) => {
