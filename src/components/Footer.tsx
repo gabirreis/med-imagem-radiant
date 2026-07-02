@@ -69,6 +69,8 @@ const Footer = () => {
             <Link to="/politica-de-privacidade" className="hover:opacity-100 transition-opacity">Política de Privacidade</Link>
             <span>|</span>
             <Link to="/termos-de-uso" className="hover:opacity-100 transition-opacity">Termos de Uso</Link>
+            <span>|</span>
+            <Link to="/politica-de-cookies" className="hover:opacity-100 transition-opacity">Política de Cookies</Link>
           </div>
           <p className="text-xs text-primary-foreground/50 mt-1">Responsável Técnica: Dra Cecilia Maria de Oliveira Gonçalves – CRM 6381</p>
           <p>© {new Date().getFullYear()} Med Imagem São Mateus. Todos os direitos reservados.</p>
