@@ -1,8 +1,11 @@
 import examUltrassom from "@/assets/exam-ultrassom.webp";
 import examRessonancia from "@/assets/exam-ressonancia.webp";
 import examRaiox from "@/assets/exam-raiox.webp";
-import examTomografia from "@/assets/exam-tomografia.jpg";
-import examMamografia from "@/assets/exam-mamografia.jpg";
+import examTomografiaAsset from "@/assets/exam-tomografia.webp.asset.json";
+import examMamografiaAsset from "@/assets/exam-mamografia.webp.asset.json";
+
+const examTomografia = examTomografiaAsset.url;
+const examMamografia = examMamografiaAsset.url;
 
 export interface ExamData {
   slug: string;

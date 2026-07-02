@@ -1,12 +1,21 @@
-# Atualizar lista de convênios
+# Atualizar imagens de Mamografia e Tomografia
 
-## Objetivo
-Substituir a lista atual de convênios em `src/pages/Convenios.tsx` pela lista oficial fornecida.
+Substituir as imagens dos exames de **Mamografia** e **Tomografia Computadorizada** pelas fotos reais dos equipamentos da clínica (uploads do usuário).
 
-## Lista nova (32 itens)
-AMBEP, AMIL, CARTÃO DE TODOS, BANESCAIXA, BEST SENIOR, PETROBRAS, BRADESCO, CAPE SAÚDE, CAPITAL PREV – CESAN, CASSI, COMPARTILHE SAÚDE, ECONOMIC, EPHARMA, EXCELÊNCIA – MERIDIONAL SAÚDE, MAIS SAÚDE MONTANHA, MEDSEMPRE, NOVA SAÚDE, OAB – CAAES, PAX VIDA, POSTAL SAÚDE, RHMED, RIO DOCE SAÚDE, SAMP, SÃO BERNARDO, SAUDE CAIXA, SELECT OPERADORA, SEPACO, SIND EMPRESA, SINDICATO RURAL DE JAGUARE, SINDICATO RURAL DE SÃO MATEUS, TECNOSEG, UNIMED.
+## Passos
 
-## Alteração técnica
-- Arquivo: `src/pages/Convenios.tsx`
-- Ação: substituir o array `convenios` (linhas 7–11) pelo novo array com os 32 nomes fornecidos, mantendo a ordem alfabética sugerida pelo cliente.
-- Sem mudanças de layout ou comportamento — apenas atualização de dados.
+1. Publicar as duas imagens via `lovable-assets` a partir do mount `/mnt/user-uploads/`:
+   - `MAMOGRAFIA.webp` → `src/assets/exam-mamografia.webp.asset.json`
+   - `TOMOGRAFIA.webp` → `src/assets/exam-tomografia.webp.asset.json`
+2. Atualizar `src/data/exams.ts`:
+   - Trocar os imports antigos (`exam-mamografia.jpg`, `exam-tomografia.jpg`) pelos novos pointers `.asset.json`
+   - Usar `.url` do pointer no campo `image` de cada exame
+3. Manter todos os outros campos (nome, descrição, preparo) inalterados
+
+As imagens antigas continuam nos assets do projeto, mas deixam de ser referenciadas — sem impacto no bundle.
+
+## Onde aparece automaticamente
+- Home (grid de exames)
+- Página `/exames`
+- Páginas individuais `/mamografia` e `/tomografia`
+- Sidebar "Outros exames"
