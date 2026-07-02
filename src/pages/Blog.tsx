@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
-import { Calendar, Tag } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Calendar, Tag, ChevronDown } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import Layout from "@/components/Layout";
 import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
 import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
@@ -7,6 +9,7 @@ import newsJpr2025Img from "@/assets/news-jpr-2025.png";
 
 const blogPosts = [
   {
+    slug: "outubro-rosa-2025",
     title: "Outubro Rosa Edição 2025 – Esse laço nunca fez tanto sentido!",
     excerpt: "Med Imagem, Clínica Salles e CEDIM se unem novamente para oferecer mamografias gratuitas a mulheres da região de São Mateus. Em 2024, mais de 10 mil mulheres foram atendidas e 1.001 exames realizados. O Dia D acontece em 4 de outubro no SESC São Mateus.",
     date: "24 de setembro de 2025",
@@ -21,6 +24,7 @@ const blogPosts = [
     credit: "Foto: Welington Prado – Tc Digital",
   },
   {
+    slug: "ciclo-do-saber-2025",
     title: "Ciclo do Saber – Saúde Mental no Trabalho",
     excerpt: "A Med Imagem apoiou o evento realizado pelo Senac no SESC São Mateus sobre saúde mental no ambiente de trabalho. A programação abordou prevenção, intervenção e o papel da liderança frente ao bem-estar dos colaboradores.",
     date: "21 de agosto de 2025",
@@ -35,6 +39,7 @@ const blogPosts = [
     credit: null,
   },
   {
+    slug: "jpr-2025",
     title: "Med Imagem marca presença na JPR 2025",
     excerpt: "A Med Imagem representou o Norte Capixaba na 55ª Jornada Paulista de Radiologia, maior evento de diagnóstico por imagem da América Latina, realizado no Transamerica Expo Center em São Paulo.",
     date: "5 de maio de 2025",
@@ -51,6 +56,20 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const { hash } = useLocation();
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  useEffect(() => {
+    const slug = hash.replace("#", "");
+    if (slug) {
+      setExpanded(slug);
+      setTimeout(() => {
+        const el = document.getElementById(slug);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+    }
+  }, [hash]);
+
   return (
     <Layout>
       <section className="py-16 bg-primary">
@@ -63,47 +82,74 @@ const Blog = () => {
       </section>
       <section className="py-16 bg-background">
         <div className="container max-w-3xl divide-y divide-border">
-          {blogPosts.map((post, i) => (
-            <motion.article
-              key={post.title}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="flex gap-5 py-8 items-start group"
-            >
-              <div className="w-32 h-22 flex-shrink-0 rounded-lg overflow-hidden" style={{ height: "88px" }}>
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-accent px-2.5 py-0.5 rounded-full">
-                    <Tag className="w-3 h-3" />
-                    {post.category}
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-                    <Calendar className="w-3 h-3" />
-                    {post.date}
-                  </span>
-                </div>
-                <h2 className="text-base font-semibold text-foreground leading-snug mb-2">{post.title}</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{post.excerpt}</p>
-                {post.content.length > 0 && (
-                  <div className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed border-t border-border pt-4">
-                    {post.content.map((paragraph, j) => (
-                      <p key={j}>{paragraph}</p>
-                    ))}
-                    {post.credit && (
-                      <p className="text-xs text-muted-foreground/50 italic mt-3">{post.credit}</p>
-                    )}
+          {blogPosts.map((post, i) => {
+            const isOpen = expanded === post.slug;
+            return (
+              <motion.article
+                key={post.slug}
+                id={post.slug}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
+                className="py-8"
+              >
+                <button
+                  onClick={() => setExpanded(isOpen ? null : post.slug)}
+                  className="flex gap-5 items-start w-full text-left group"
+                >
+                  <div className="flex-shrink-0 rounded-lg overflow-hidden" style={{ width: "128px", height: "88px" }}>
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                )}
-              </div>
-            </motion.article>
-          ))}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-accent px-2.5 py-0.5 rounded-full">
+                        <Tag className="w-3 h-3" />
+                        {post.category}
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                        <Calendar className="w-3 h-3" />
+                        {post.date}
+                      </span>
+                    </div>
+                    <h2 className="text-base font-semibold text-foreground leading-snug mb-2 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{post.excerpt}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary">
+                      {isOpen ? "Fechar" : "Ler mais"}
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+                    </span>
+                  </div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-5 pl-0 md:pl-[152px] space-y-3 text-sm text-muted-foreground leading-relaxed border-t border-border pt-5">
+                        {post.content.map((paragraph, j) => (
+                          <p key={j}>{paragraph}</p>
+                        ))}
+                        {post.credit && (
+                          <p className="text-xs text-muted-foreground/50 italic mt-3">{post.credit}</p>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.article>
+            );
+          })}
         </div>
       </section>
     </Layout>
