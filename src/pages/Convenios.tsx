@@ -3,14 +3,18 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import ambepLogo from "@/assets/convenios/ambep.png.asset.json";
+import amilLogo from "@/assets/convenios/amil.png.asset.json";
 import banescaixaLogo from "@/assets/convenios/banescaixa.png.asset.json";
 import bradescoLogo from "@/assets/convenios/bradesco.png.asset.json";
+import capeSaudeLogo from "@/assets/convenios/cape-saude.png.asset.json";
 import cartaoDeTodosLogo from "@/assets/convenios/cartao-de-todos.png.asset.json";
 import cassiLogo from "@/assets/convenios/cassi.png.asset.json";
 import economicLogo from "@/assets/convenios/economic.png.asset.json";
+import paxVidaLogo from "@/assets/convenios/pax-vida.png.asset.json";
 import petrobrasLogo from "@/assets/convenios/petrobras.png.asset.json";
 import sampLogo from "@/assets/convenios/samp.png.asset.json";
 import saoBernardoLogo from "@/assets/convenios/sao-bernardo.png.asset.json";
+import unimedLogo from "@/assets/convenios/unimed.png.asset.json";
 
 type Convenio = { nome: string; logo?: string };
 
