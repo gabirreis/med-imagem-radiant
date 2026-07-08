@@ -7,7 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { examsData } from "@/data/exams";
 import heroBg from "@/assets/hero-bg.webp";
 import clinicExterior from "@/assets/clinic-exterior.webp";
-import humanizacaoImg from "@/assets/humanizacao.jpg";
+import humanizacaoImg from "@/assets/cuidar-diagnosticar.webp.asset.json";
 import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
 import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
 import newsJpr2025Img from "@/assets/news-jpr-2025.png";
@@ -247,7 +247,7 @@ const Index = () => {
               className="order-1 lg:order-1"
             >
               <img
-                src={humanizacaoImg}
+                src={humanizacaoImg.url}
                 alt="Profissional da Med Imagem acolhendo paciente em sala de exame"
                 className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover"
               />
