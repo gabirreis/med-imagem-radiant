@@ -2,17 +2,51 @@ import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import SectionHeading from "@/components/SectionHeading";
+import ambepLogo from "@/assets/convenios/ambep.png.asset.json";
+import banescaixaLogo from "@/assets/convenios/banescaixa.png.asset.json";
+import bradescoLogo from "@/assets/convenios/bradesco.png.asset.json";
+import cartaoDeTodosLogo from "@/assets/convenios/cartao-de-todos.png.asset.json";
+import cassiLogo from "@/assets/convenios/cassi.png.asset.json";
+import economicLogo from "@/assets/convenios/economic.png.asset.json";
+import petrobrasLogo from "@/assets/convenios/petrobras.png.asset.json";
+import sampLogo from "@/assets/convenios/samp.png.asset.json";
+import saoBernardoLogo from "@/assets/convenios/sao-bernardo.png.asset.json";
 
-const convenios = [
-  "AMBEP", "AMIL", "BANESCAIXA", "BEST SENIOR", "BRADESCO", "CAPE SAÚDE",
-  "CAPITAL PREV – CESAN", "CARTÃO DE TODOS", "CASSI", "COMPARTILHE SAÚDE",
-  "ECONOMIC", "EPHARMA", "EXCELÊNCIA – MERIDIONAL SAÚDE", "MAIS SAÚDE MONTANHA",
-  "MEDSEMPRE", "NOVA SAÚDE", "OAB – CAAES", "PAX VIDA", "PETROBRAS",
-  "POSTAL SAÚDE", "RHMED", "RIO DOCE SAÚDE", "SAMP", "SÃO BERNARDO",
-  "SAUDE CAIXA", "SELECT OPERADORA", "SEPACO", "SIND EMPRESA",
-  "SINDICATO RURAL DE JAGUARE", "SINDICATO RURAL DE SÃO MATEUS",
-  "TECNOSEG", "UNIMED",
+type Convenio = { nome: string; logo?: string };
+
+const convenios: Convenio[] = [
+  { nome: "AMBEP", logo: ambepLogo.url },
+  { nome: "AMIL" },
+  { nome: "BANESCAIXA", logo: banescaixaLogo.url },
+  { nome: "BEST SENIOR" },
+  { nome: "BRADESCO", logo: bradescoLogo.url },
+  { nome: "CAPE SAÚDE" },
+  { nome: "CAPITAL PREV – CESAN" },
+  { nome: "CARTÃO DE TODOS", logo: cartaoDeTodosLogo.url },
+  { nome: "CASSI", logo: cassiLogo.url },
+  { nome: "COMPARTILHE SAÚDE" },
+  { nome: "ECONOMIC", logo: economicLogo.url },
+  { nome: "EPHARMA" },
+  { nome: "EXCELÊNCIA – MERIDIONAL SAÚDE" },
+  { nome: "MAIS SAÚDE MONTANHA" },
+  { nome: "MEDSEMPRE" },
+  { nome: "NOVA SAÚDE" },
+  { nome: "OAB – CAAES" },
+  { nome: "PAX VIDA" },
+  { nome: "PETROBRAS", logo: petrobrasLogo.url },
+  { nome: "POSTAL SAÚDE" },
+  { nome: "RHMED" },
+  { nome: "RIO DOCE SAÚDE" },
+  { nome: "SAMP", logo: sampLogo.url },
+  { nome: "SÃO BERNARDO", logo: saoBernardoLogo.url },
+  { nome: "SAUDE CAIXA" },
+  { nome: "SELECT OPERADORA" },
+  { nome: "SEPACO" },
+  { nome: "SIND EMPRESA" },
+  { nome: "SINDICATO RURAL DE JAGUARE" },
+  { nome: "SINDICATO RURAL DE SÃO MATEUS" },
+  { nome: "TECNOSEG" },
+  { nome: "UNIMED" },
 ];
 
 const Convenios = () => {
@@ -31,13 +65,24 @@ const Convenios = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {convenios.map((conv, i) => (
               <motion.div
-                key={conv}
+                key={conv.nome}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.03, duration: 0.3 }}
-                className="bg-card rounded-lg p-6 flex items-center justify-center h-24 shadow-card text-sm font-medium text-muted-foreground text-center"
+                className="bg-card rounded-lg p-4 flex items-center justify-center h-24 shadow-card"
               >
-                {conv}
+                {conv.logo ? (
+                  <img
+                    src={conv.logo}
+                    alt={`Logo ${conv.nome}`}
+                    loading="lazy"
+                    className="max-h-16 max-w-full object-contain"
+                  />
+                ) : (
+                  <span className="text-sm font-medium text-muted-foreground text-center">
+                    {conv.nome}
+                  </span>
+                )}
               </motion.div>
             ))}
           </div>
