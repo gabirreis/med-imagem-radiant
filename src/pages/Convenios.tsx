@@ -6,6 +6,7 @@ import ambepLogo from "@/assets/convenios/ambep.png.asset.json";
 import amilLogo from "@/assets/convenios/amil.png.asset.json";
 import banescaixaLogo from "@/assets/convenios/banescaixa.png.asset.json";
 import bradescoLogo from "@/assets/convenios/bradesco.png.asset.json";
+import caaesLogo from "@/assets/convenios/caaes.png.asset.json";
 import capeSaudeLogo from "@/assets/convenios/cape-saude.png.asset.json";
 import compartilheSaudeLogo from "@/assets/convenios/compartilhe-saude.png.asset.json";
 import cartaoDeTodosLogo from "@/assets/convenios/cartao-de-todos.png.asset.json";
@@ -15,7 +16,10 @@ import paxVidaLogo from "@/assets/convenios/pax-vida.png.asset.json";
 import petrobrasLogo from "@/assets/convenios/petrobras.png.asset.json";
 import sampLogo from "@/assets/convenios/samp.png.asset.json";
 import saoBernardoLogo from "@/assets/convenios/sao-bernardo.png.asset.json";
+import saudeCaixaLogo from "@/assets/convenios/saude-caixa.png.asset.json";
 import sepacoLogo from "@/assets/convenios/sepaco.png.asset.json";
+import sindicatoRuralJaguareLogo from "@/assets/convenios/sindicato-rural-jaguare.png.asset.json";
+import sindicatoRuralSaoMateusLogo from "@/assets/convenios/sindicato-rural-sao-mateus.png.asset.json";
 import unimedLogo from "@/assets/convenios/unimed.png.asset.json";
 
 type Convenio = { nome: string; logo?: string };
