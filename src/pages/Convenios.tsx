@@ -7,6 +7,7 @@ import amilLogo from "@/assets/convenios/amil.png.asset.json";
 import banescaixaLogo from "@/assets/convenios/banescaixa.png.asset.json";
 import bradescoLogo from "@/assets/convenios/bradesco.png.asset.json";
 import capeSaudeLogo from "@/assets/convenios/cape-saude.png.asset.json";
+import compartilheSaudeLogo from "@/assets/convenios/compartilhe-saude.png.asset.json";
 import cartaoDeTodosLogo from "@/assets/convenios/cartao-de-todos.png.asset.json";
 import cassiLogo from "@/assets/convenios/cassi.png.asset.json";
 import economicLogo from "@/assets/convenios/economic.png.asset.json";
@@ -29,7 +30,7 @@ const convenios: Convenio[] = [
   { nome: "CAPITAL PREV – CESAN" },
   { nome: "CARTÃO DE TODOS", logo: cartaoDeTodosLogo.url },
   { nome: "CASSI", logo: cassiLogo.url },
-  { nome: "COMPARTILHE SAÚDE" },
+  { nome: "COMPARTILHE SAÚDE", logo: compartilheSaudeLogo.url },
   { nome: "ECONOMIC", logo: economicLogo.url },
   { nome: "EPHARMA" },
   { nome: "EXCELÊNCIA – MERIDIONAL SAÚDE" },
