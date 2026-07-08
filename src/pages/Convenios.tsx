@@ -20,11 +20,11 @@ type Convenio = { nome: string; logo?: string };
 
 const convenios: Convenio[] = [
   { nome: "AMBEP", logo: ambepLogo.url },
-  { nome: "AMIL" },
+  { nome: "AMIL", logo: amilLogo.url },
   { nome: "BANESCAIXA", logo: banescaixaLogo.url },
   { nome: "BEST SENIOR" },
   { nome: "BRADESCO", logo: bradescoLogo.url },
-  { nome: "CAPE SAÚDE" },
+  { nome: "CAPE SAÚDE", logo: capeSaudeLogo.url },
   { nome: "CAPITAL PREV – CESAN" },
   { nome: "CARTÃO DE TODOS", logo: cartaoDeTodosLogo.url },
   { nome: "CASSI", logo: cassiLogo.url },
@@ -36,7 +36,7 @@ const convenios: Convenio[] = [
   { nome: "MEDSEMPRE" },
   { nome: "NOVA SAÚDE" },
   { nome: "OAB – CAAES" },
-  { nome: "PAX VIDA" },
+  { nome: "PAX VIDA", logo: paxVidaLogo.url },
   { nome: "PETROBRAS", logo: petrobrasLogo.url },
   { nome: "POSTAL SAÚDE" },
   { nome: "RHMED" },
@@ -50,7 +50,7 @@ const convenios: Convenio[] = [
   { nome: "SINDICATO RURAL DE JAGUARE" },
   { nome: "SINDICATO RURAL DE SÃO MATEUS" },
   { nome: "TECNOSEG" },
-  { nome: "UNIMED" },
+  { nome: "UNIMED", logo: unimedLogo.url },
 ];
 
 const Convenios = () => {
