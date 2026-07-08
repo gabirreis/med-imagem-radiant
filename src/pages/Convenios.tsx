@@ -14,6 +14,7 @@ import paxVidaLogo from "@/assets/convenios/pax-vida.png.asset.json";
 import petrobrasLogo from "@/assets/convenios/petrobras.png.asset.json";
 import sampLogo from "@/assets/convenios/samp.png.asset.json";
 import saoBernardoLogo from "@/assets/convenios/sao-bernardo.png.asset.json";
+import sepacoLogo from "@/assets/convenios/sepaco.png.asset.json";
 import unimedLogo from "@/assets/convenios/unimed.png.asset.json";
 
 type Convenio = { nome: string; logo?: string };
@@ -45,7 +46,7 @@ const convenios: Convenio[] = [
   { nome: "SÃO BERNARDO", logo: saoBernardoLogo.url },
   { nome: "SAUDE CAIXA" },
   { nome: "SELECT OPERADORA" },
-  { nome: "SEPACO" },
+  { nome: "SEPACO", logo: sepacoLogo.url },
   { nome: "SIND EMPRESA" },
   { nome: "SINDICATO RURAL DE JAGUARE" },
   { nome: "SINDICATO RURAL DE SÃO MATEUS" },
