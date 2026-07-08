@@ -247,7 +247,7 @@ const Index = () => {
               className="order-1 lg:order-1"
             >
               <img
-                src={humanizacaoImg}
+                src={humanizacaoImg.url}
                 alt="Profissional da Med Imagem acolhendo paciente em sala de exame"
                 className="rounded-2xl shadow-elevated w-full max-w-md mx-auto aspect-[4/3] object-cover"
               />
