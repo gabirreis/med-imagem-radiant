@@ -86,7 +86,7 @@ const Sobre = () => {
                 titulo: "Os primeiros passos",
                 texto:
                   "Em 1998, os médicos Dr. José Luiz Silva Neves, neurocirurgião, e Dr. Jorge Silva, urologista, uniram conhecimento e visão para transformar a realidade da saúde na região. A proposta era ousada para a época: trazer tecnologia de ponta para São Mateus e oferecer diagnósticos mais assertivos, sem a necessidade de deslocamento para outros estados. Assim nasceu a Med Imagem — com uma visão clara de futuro e um compromisso inegociável com a qualidade.",
-                imagem: sobrePrimeirosPassos,
+                imagem: sobrePrimeirosPassos.url,
                 alt: "Fachada histórica de clínica médica",
               },
               {
@@ -100,7 +100,7 @@ const Sobre = () => {
                 titulo: "O que nos move",
                 texto:
                   "Mais do que tecnologia, o que sustenta a Med Imagem é o compromisso com o cuidado integral do paciente. A gestão administrativa, a diretoria médica e toda a equipe compartilham um mesmo propósito: fazer sempre melhor. A busca por capacitação contínua, o investimento em desenvolvimento humano e o foco no atendimento acolhedor fazem parte da essência da clínica. O atendimento humanizado não é apenas um diferencial — é uma escolha diária.",
-                imagem: sobreOQueNosMove,
+                imagem: sobreOQueNosMove.url,
                 alt: "Médica acolhendo paciente",
               },
               {
