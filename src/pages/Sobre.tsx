@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import clinicExterior from "@/assets/clinic-exterior.webp";
-import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.jpg";
+import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.webp.asset.json";
 import evolucaoConstante from "@/assets/evolucao-constante.webp.asset.json";
-import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.jpg";
+import sobreOQueNosMove from "@/assets/sobre-o-que-nos-move.webp.asset.json";
 import sobreHoje from "@/assets/sobre-hoje.webp.asset.json";
 
 const fadeUp = {
