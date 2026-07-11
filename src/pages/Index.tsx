@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, FileText, Star, Cpu, HeartHandshake, Rocket } from "lucide-react";
+import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, Star, Cpu, HeartHandshake, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
@@ -39,12 +39,6 @@ const Index = () => {
     { title: "Outubro Rosa Edição 2025", date: "24 Set 2025", category: "Saúde", summary: "Med Imagem, Clínica Salles e CEDIM se unem mais uma vez para levar mamografias gratuitas a mulheres da região. O Dia D acontece em 4 de outubro no SESC São Mateus.", image: newsOutubraRosaImg, slug: "outubro-rosa-2025" },
     { title: "Ciclo do Saber – Saúde Mental no Trabalho", date: "21 Ago 2025", category: "Evento", summary: "Med Imagem e parceiros apoiam evento do Senac sobre saúde mental realizado no SESC São Mateus com foco em prevenção e liderança.", image: newsCicloSaberImg, slug: "ciclo-do-saber-2025" },
     { title: "Med Imagem na JPR 2025", date: "05 Mai 2025", category: "Evento", summary: "A clínica marcou presença na 55ª Jornada Paulista de Radiologia, maior evento de diagnóstico por imagem da América Latina, no Transamerica Expo Center em São Paulo.", image: newsJpr2025Img, slug: "jpr-2025" },
-  ];
-
-  const blogPosts = [
-    { title: "Preparo para ressonância magnética", slug: "preparo-ressonancia", excerpt: "Saiba tudo o que você precisa fazer antes de realizar uma ressonância magnética." },
-    { title: "Quando fazer mamografia?", slug: "quando-fazer-mamografia", excerpt: "Entenda a importância da mamografia e a idade recomendada para começar." },
-    { title: "Diferença entre tomografia e ressonância", slug: "diferenca-tomografia-ressonancia", excerpt: "Descubra quando cada exame é indicado e suas principais diferenças." },
   ];
 
   return (
@@ -370,32 +364,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <SectionHeading title="Conteúdos para sua saúde" subtitle="Informações úteis sobre exames e cuidados com a saúde." />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.map((post, i) => (
-              <motion.div
-                key={post.slug}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-lg p-6 shadow-card hover:shadow-elevated transition-shadow"
-              >
-                <span className="text-xs font-medium text-primary uppercase tracking-wider">Artigo</span>
-                <h3 className="mt-2 text-lg font-semibold text-foreground">{post.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
-                <Link to="/blog" className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline">
-                  Ler mais <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Agendamento */}
       <section className="py-20 bg-primary">
