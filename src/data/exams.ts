@@ -98,8 +98,8 @@ export const examsData: ExamData[] = [
   },
   {
     slug: "mamografia",
-    name: "Mamografia",
-    shortName: "Mamografia",
+    name: "Mamografia Digital",
+    shortName: "Mamografia Digital",
     image: examMamografia,
     description: "Exame essencial para rastreamento e diagnóstico precoce do câncer de mama.",
     whatIs: "A mamografia é um exame de imagem específico para as mamas que utiliza raios-X de baixa dose para detectar alterações no tecido mamário, sendo fundamental para o diagnóstico precoce do câncer de mama.",
