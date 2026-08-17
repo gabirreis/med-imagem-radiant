@@ -1,13 +1,22 @@
+﻿import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Clock, ArrowLeft } from "lucide-react";
+import { Phone, Clock, ArrowLeft, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { getExamBySlug, examsData } from "@/data/exams";
 
+const normalize = (s: string) =>
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
 const ExamePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const exam = getExamBySlug(slug || "");
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    setQuery("");
+  }, [slug]);
 
   if (!exam) {
     return (
@@ -23,6 +32,12 @@ const ExamePage = () => {
   }
 
   const otherExams = examsData.filter(e => e.slug !== exam.slug).slice(0, 3);
+
+  const procedures = exam.procedures ?? [];
+  const q = normalize(query.trim());
+  const filteredProcedures = q
+    ? procedures.filter((p) => normalize(p).includes(q))
+    : procedures;
 
   return (
     <Layout>
@@ -64,6 +79,48 @@ const ExamePage = () => {
                 </div>
                 <p className="text-muted-foreground">{exam.duration}</p>
               </div>
+
+              {procedures.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground">Exames realizados</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">Digite para encontrar rapidamente o exame solicitado.</p>
+
+                  <div className="mt-4 flex items-center gap-3">
+                    <div className="relative flex-1">
+                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                      <input
+                        type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Buscar exame (ex: joelho, crânio, coluna)"
+                        aria-label="Buscar exame"
+                        className="w-full pl-10 pr-3 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground whitespace-nowrap">
+                      {filteredProcedures.length} {filteredProcedures.length === 1 ? "exame" : "exames"}
+                    </span>
+                  </div>
+
+                  {filteredProcedures.length > 0 ? (
+                    <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                      {filteredProcedures.map((p) => (
+                        <li key={p} className="flex items-start gap-2 py-2 text-sm text-muted-foreground border-b border-border">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                          <span>{p}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-4 text-sm text-muted-foreground">
+                      Nenhum exame encontrado para “{query}”. Não encontrou o que procura?{" "}
+                      <a href="https://wa.me/5527998684980" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        Fale com nossa equipe pelo WhatsApp
+                      </a>.
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Sidebar */}
