@@ -21,7 +21,7 @@ const Contato = () => {
             {[
               { icon: Phone, title: "Telefone", info: "(27) 3763-3366 / (27) 99868-4980", sub: "Segunda a sexta, 7h às 18h" },
               { icon: MapPin, title: "Endereço", info: "Rua Ermelino Carneiro Sobrinho, 221", sub: "Bairro Fátima, São Mateus/ES" },
-              { icon: Mail, title: "E-mail", info: "contato@medimagemsm.com.br", sub: "Respondemos em até 24h" },
+              { icon: Mail, title: "E-mail", info: "contato@medimagemsm.com.br", sub: "" },
               { icon: Clock, title: "Horário", info: "Seg a Sex: 7h às 18h", sub: "Sáb: 7h às 12h" },
             ].map((item, i) => (
               <motion.div
@@ -37,7 +37,7 @@ const Contato = () => {
                 <div>
                   <h3 className="font-semibold text-foreground">{item.title}</h3>
                   <p className="text-muted-foreground mt-1">{item.info}</p>
-                  <p className="text-sm text-muted-foreground">{item.sub}</p>
+                  {item.sub && <p className="text-sm text-muted-foreground">{item.sub}</p>}
                 </div>
               </motion.div>
             ))}
