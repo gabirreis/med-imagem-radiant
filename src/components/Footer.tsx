@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const Footer = () => {
@@ -13,6 +13,26 @@ const Footer = () => {
             <p className="text-sm opacity-80 leading-relaxed">
               Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
             </p>
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href="https://www.instagram.com/medimagem.sm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da Med Imagem"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.facebook.com/medimagem.sm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook da Med Imagem"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Col 2 - Exames */}
@@ -21,9 +41,9 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-80">
               <li><Link to="/ultrassonografia" className="hover:opacity-100 transition-opacity">Ultrassonografia</Link></li>
               <li><Link to="/ressonancia-magnetica" className="hover:opacity-100 transition-opacity">Ressonância Magnética</Link></li>
-              <li><Link to="/raio-x" className="hover:opacity-100 transition-opacity">Raio-X</Link></li>
-              <li><Link to="/tomografia" className="hover:opacity-100 transition-opacity">Tomografia</Link></li>
-              <li><Link to="/mamografia" className="hover:opacity-100 transition-opacity">Mamografia</Link></li>
+              <li><Link to="/raio-x" className="hover:opacity-100 transition-opacity">Raio X - Digital</Link></li>
+              <li><Link to="/tomografia" className="hover:opacity-100 transition-opacity">Tomografia Computadorizada</Link></li>
+              <li><Link to="/mamografia" className="hover:opacity-100 transition-opacity">Mamografia Digital</Link></li>
             </ul>
           </div>
 

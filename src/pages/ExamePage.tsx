@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Phone, Clock, FileText, ArrowLeft, CheckCircle } from "lucide-react";
+import { Phone, Clock, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { getExamBySlug, examsData } from "@/data/exams";
@@ -63,21 +63,6 @@ const ExamePage = () => {
                   <h2 className="text-2xl font-bold text-foreground">Tempo de duração</h2>
                 </div>
                 <p className="text-muted-foreground">{exam.duration}</p>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <FileText className="w-5 h-5 text-primary" />
-                  <h2 className="text-2xl font-bold text-foreground">Orientações de preparo</h2>
-                </div>
-                <ul className="space-y-2">
-                  {exam.preparation.map((prep) => (
-                    <li key={prep} className="flex items-start gap-2 text-muted-foreground">
-                      <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>{prep}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
 

@@ -61,11 +61,11 @@ export const examsData: ExamData[] = [
   },
   {
     slug: "raio-x",
-    name: "Raio-X",
-    shortName: "Raio-X",
+    name: "Raio X - Digital",
+    shortName: "Raio X - Digital",
     image: examRaiox,
     description: "Exame rápido e eficaz para avaliação de estruturas ósseas e torácicas.",
-    whatIs: "O raio-X é um exame de imagem que utiliza uma pequena dose de radiação para produzir imagens das estruturas internas do corpo, especialmente ossos e órgãos torácicos.",
+    whatIs: "O Raio X - Digital é um exame de imagem que utiliza uma pequena dose de radiação para produzir imagens das estruturas internas do corpo, especialmente ossos e órgãos torácicos.",
     purpose: "É utilizado para diagnosticar fraturas, infecções pulmonares, alterações cardíacas, problemas dentários e outras condições que afetam ossos e órgãos.",
     indications: "Indicado em casos de trauma, dor óssea, tosse persistente, avaliação pré-operatória, acompanhamento de fraturas e investigação de diversas condições clínicas.",
     howItsDone: "O paciente é posicionado em frente ao equipamento e deve permanecer imóvel por alguns segundos enquanto a imagem é capturada. O procedimento é rápido e indolor.",
@@ -80,7 +80,7 @@ export const examsData: ExamData[] = [
   {
     slug: "tomografia",
     name: "Tomografia Computadorizada",
-    shortName: "Tomografia",
+    shortName: "Tomografia Computadorizada",
     image: examTomografia,
     description: "Imagens detalhadas em cortes transversais para diagnósticos precisos.",
     whatIs: "A tomografia computadorizada é um exame que combina raios-X com tecnologia computadorizada para produzir imagens detalhadas em cortes transversais do corpo, permitindo visualização precisa de órgãos e estruturas.",
