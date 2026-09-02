@@ -21,6 +21,19 @@ import sepacoLogo from "@/assets/convenios/sepaco.png.asset.json";
 import sindicatoRuralJaguareLogo from "@/assets/convenios/sindicato-rural-jaguare.png.asset.json";
 import sindicatoRuralSaoMateusLogo from "@/assets/convenios/sindicato-rural-sao-mateus.png.asset.json";
 import unimedLogo from "@/assets/convenios/unimed.png.asset.json";
+import bestSeniorLogo from "@/assets/convenios/best-senior.jpg";
+import capitalPrevLogo from "@/assets/convenios/capital-prev.jpg";
+import epharmaLogo from "@/assets/convenios/epharma.jpg";
+import maisSaudeMontanhaLogo from "@/assets/convenios/mais-saude-montanha.jpg";
+import medsempreLogo from "@/assets/convenios/medsempre.jpg";
+import meridionalSaudeLogo from "@/assets/convenios/meridional-saude.jpg";
+import novaSaudeLogo from "@/assets/convenios/nova-saude.jpg";
+import postalSaudeLogo from "@/assets/convenios/postal-saude.jpg";
+import rhmedLogo from "@/assets/convenios/rhmed.jpg";
+import rioDoceSaudeLogo from "@/assets/convenios/rio-doce-saude.jpg";
+import selectOperadoraLogo from "@/assets/convenios/select-operadora.jpg";
+import sindEmpresaLogo from "@/assets/convenios/sind-empresa.jpg";
+import tecnosegLogo from "@/assets/convenios/tecnoseg.jpg";
 
 type Convenio = { nome: string; logo?: string };
 
@@ -28,34 +41,34 @@ const convenios: Convenio[] = [
   { nome: "AMBEP", logo: ambepLogo.url },
   { nome: "AMIL", logo: amilLogo.url },
   { nome: "BANESCAIXA", logo: banescaixaLogo.url },
-  { nome: "BEST SENIOR" },
+  { nome: "BEST SENIOR", logo: bestSeniorLogo },
   { nome: "BRADESCO", logo: bradescoLogo.url },
   { nome: "CAPE SAÚDE", logo: capeSaudeLogo.url },
-  { nome: "CAPITAL PREV – CESAN" },
+  { nome: "CAPITAL PREV – CESAN", logo: capitalPrevLogo },
   { nome: "CARTÃO DE TODOS", logo: cartaoDeTodosLogo.url },
   { nome: "CASSI", logo: cassiLogo.url },
   { nome: "COMPARTILHE SAÚDE", logo: compartilheSaudeLogo.url },
   { nome: "ECONOMIC", logo: economicLogo.url },
-  { nome: "EPHARMA" },
-  { nome: "EXCELÊNCIA – MERIDIONAL SAÚDE" },
-  { nome: "MAIS SAÚDE MONTANHA" },
-  { nome: "MEDSEMPRE" },
-  { nome: "NOVA SAÚDE" },
+  { nome: "EPHARMA", logo: epharmaLogo },
+  { nome: "EXCELÊNCIA – MERIDIONAL SAÚDE", logo: meridionalSaudeLogo },
+  { nome: "MAIS SAÚDE MONTANHA", logo: maisSaudeMontanhaLogo },
+  { nome: "MEDSEMPRE", logo: medsempreLogo },
+  { nome: "NOVA SAÚDE", logo: novaSaudeLogo },
   { nome: "OAB – CAAES", logo: caaesLogo.url },
   { nome: "PAX VIDA", logo: paxVidaLogo.url },
   { nome: "PETROBRAS", logo: petrobrasLogo.url },
-  { nome: "POSTAL SAÚDE" },
-  { nome: "RHMED" },
-  { nome: "RIO DOCE SAÚDE" },
+  { nome: "POSTAL SAÚDE", logo: postalSaudeLogo },
+  { nome: "RHMED", logo: rhmedLogo },
+  { nome: "RIO DOCE SAÚDE", logo: rioDoceSaudeLogo },
   { nome: "SAMP", logo: sampLogo.url },
   { nome: "SÃO BERNARDO", logo: saoBernardoLogo.url },
   { nome: "SAUDE CAIXA", logo: saudeCaixaLogo.url },
-  { nome: "SELECT OPERADORA" },
+  { nome: "SELECT OPERADORA", logo: selectOperadoraLogo },
   { nome: "SEPACO", logo: sepacoLogo.url },
-  { nome: "SIND EMPRESA" },
+  { nome: "SIND EMPRESA", logo: sindEmpresaLogo },
   { nome: "SINDICATO RURAL DE JAGUARE", logo: sindicatoRuralJaguareLogo.url },
   { nome: "SINDICATO RURAL DE SÃO MATEUS", logo: sindicatoRuralSaoMateusLogo.url },
-  { nome: "TECNOSEG" },
+  { nome: "TECNOSEG", logo: tecnosegLogo },
   { nome: "UNIMED", logo: unimedLogo.url },
 ];
 
