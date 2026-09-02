@@ -43,6 +43,40 @@ const Contato = () => {
             ))}
           </div>
 
+          {/* Mapa */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-10"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <MapPin className="w-5 h-5 text-primary" />
+              <h2 className="text-2xl font-bold text-foreground">Onde estamos</h2>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-card border border-border">
+              <iframe
+                title="Localização da Med Imagem São Mateus no Google Maps"
+                src="https://www.google.com/maps?q=Rua%20Ermelino%20Carneiro%20Sobrinho%2C%20221%2C%20Bairro%20F%C3%A1tima%2C%20S%C3%A3o%20Mateus%20-%20ES&output=embed"
+                className="w-full h-[350px] md:h-[420px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Ermelino%20Carneiro%20Sobrinho%2C%20221%2C%20Bairro%20F%C3%A1tima%2C%20S%C3%A3o%20Mateus%20-%20ES"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+              >
+                <MapPin className="w-4 h-4" /> Como chegar
+              </a>
+            </div>
+          </motion.div>
+
           {/* CTA WhatsApp */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
