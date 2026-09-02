@@ -142,34 +142,6 @@ const Sobre = () => {
         </div>
       </section>
 
-      {/* Prontos para o futuro */}
-      <section className="py-16 bg-primary">
-        <div className="container text-center max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              Prontos para o futuro
-            </h2>
-            <div className="mt-4 h-1 w-16 bg-accent rounded-full mx-auto" />
-            <p className="mt-6 text-primary-foreground/80 leading-relaxed text-lg">
-              Após 28 anos de trajetória, a Med Imagem entra em um novo ciclo. Um ciclo em que a tecnologia avança, os processos evoluem e a medicina se transforma — mas o compromisso permanece o mesmo.
-            </p>
-            <div className="mt-8 space-y-2 text-primary-foreground/90 font-medium">
-              <p>Cuidar com precisão.</p>
-              <p>Acolher com humanidade.</p>
-              <p>Evoluir com responsabilidade.</p>
-            </div>
-            <p className="mt-8 text-primary-foreground/60 text-sm italic">
-              Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Missão, Visão e Valores */}
       <section className="py-16 bg-background">
         <div className="container">
@@ -202,6 +174,34 @@ const Sobre = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Prontos para o futuro */}
+      <section className="py-16 bg-primary">
+        <div className="container text-center max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
+              Prontos para o futuro
+            </h2>
+            <div className="mt-4 h-1 w-16 bg-accent rounded-full mx-auto" />
+            <p className="mt-6 text-primary-foreground/80 leading-relaxed text-lg">
+              Após 28 anos de trajetória, a Med Imagem entra em um novo ciclo. Um ciclo em que a tecnologia avança, os processos evoluem e a medicina se transforma — mas o compromisso permanece o mesmo.
+            </p>
+            <div className="mt-8 space-y-2 text-primary-foreground/90 font-medium">
+              <p>Cuidar com precisão.</p>
+              <p>Acolher com humanidade.</p>
+              <p>Evoluir com responsabilidade.</p>
+            </div>
+            <p className="mt-8 text-primary-foreground/60 text-sm italic">
+              Med Imagem. 28 anos cuidando de histórias. Prontos para o futuro.
+            </p>
+          </motion.div>
         </div>
       </section>
     </Layout>
