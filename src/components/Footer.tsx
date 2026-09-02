@@ -51,7 +51,6 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Links úteis</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              <li><Link to="/preparo" className="hover:opacity-100 transition-opacity">Preparo de exames</Link></li>
               <li><Link to="/convenios" className="hover:opacity-100 transition-opacity">Convênios</Link></li>
               <li><a href="https://web.clinux.com.br/portal/medimagemsm/resultados" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">Resultados</a></li>
               <li><Link to="/blog" className="hover:opacity-100 transition-opacity">Blog</Link></li>

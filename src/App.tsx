@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import Exames from "./pages/Exames";
 import ExamePage from "./pages/ExamePage";
-import Preparo from "./pages/Preparo";
 import Convenios from "./pages/Convenios";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
@@ -37,7 +36,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/exames" element={<Exames />} />
-          <Route path="/preparo" element={<Preparo />} />
           <Route path="/convenios" element={<Convenios />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
