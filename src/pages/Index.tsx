@@ -8,6 +8,7 @@ import { examsData } from "@/data/exams";
 import heroBg from "@/assets/hero-bg.webp";
 import clinicExterior from "@/assets/clinic-exterior.webp";
 import humanizacaoImg from "@/assets/cuidar-diagnosticar.webp.asset.json";
+import newsOutubroRosa2026Img from "@/assets/news-outubro-rosa-2026.webp";
 import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
 import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
 import newsJpr2025Img from "@/assets/news-jpr-2025.png";
@@ -36,6 +37,7 @@ const Index = () => {
   ];
 
   const newsItems = [
+    { title: "Outubro Rosa São Mateus lança campanha 2026", date: "08 Set 2026", category: "Saúde", summary: "Com o conceito “Você faz parte dessa história”, o movimento chega ao quarto ano reunindo empresas, instituições e comunidade. O Dia D será em 10 de outubro, no SESC São Mateus.", image: newsOutubroRosa2026Img, slug: "outubro-rosa-2026" },
     { title: "Outubro Rosa Edição 2025", date: "24 Set 2025", category: "Saúde", summary: "Med Imagem, Clínica Salles e CEDIM se unem mais uma vez para levar mamografias gratuitas a mulheres da região. O Dia D acontece em 4 de outubro no SESC São Mateus.", image: newsOutubraRosaImg, slug: "outubro-rosa-2025" },
     { title: "Ciclo do Saber – Saúde Mental no Trabalho", date: "21 Ago 2025", category: "Evento", summary: "Med Imagem e parceiros apoiam evento do Senac sobre saúde mental realizado no SESC São Mateus com foco em prevenção e liderança.", image: newsCicloSaberImg, slug: "ciclo-do-saber-2025" },
     { title: "Med Imagem na JPR 2025", date: "05 Mai 2025", category: "Evento", summary: "A clínica marcou presença na 55ª Jornada Paulista de Radiologia, maior evento de diagnóstico por imagem da América Latina, no Transamerica Expo Center em São Paulo.", image: newsJpr2025Img, slug: "jpr-2025" },

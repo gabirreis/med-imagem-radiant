@@ -3,11 +3,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Tag, ChevronDown } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import Layout from "@/components/Layout";
+import newsOutubroRosa2026Img from "@/assets/news-outubro-rosa-2026.webp";
 import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
 import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
 import newsJpr2025Img from "@/assets/news-jpr-2025.png";
 
 const blogPosts = [
+  {
+    slug: "outubro-rosa-2026",
+    title: "Outubro Rosa São Mateus lança campanha 2026",
+    excerpt: "Com o conceito “Você faz parte dessa história”, o movimento chega ao quarto ano reunindo empresas, instituições, profissionais, imprensa e comunidade em uma grande rede de cuidado. O Dia D será realizado em 10 de outubro, no SESC São Mateus.",
+    date: "8 de setembro de 2026",
+    category: "Saúde",
+    image: newsOutubroRosa2026Img,
+    content: [
+      "O Outubro Rosa São Mateus lançou oficialmente sua campanha 2026 durante uma coletiva de imprensa que reuniu parceiros, profissionais de comunicação, embaixadoras e representantes de instituições que integram o movimento. Neste ano, a campanha traz como conceito “Você faz parte dessa história” e celebra uma trajetória construída coletivamente ao longo de quatro anos de mobilização pela prevenção e pelo cuidado.",
+      "Mais do que apresentar a programação deste ano, o encontro foi também um momento de olhar para a trajetória do Outubro Rosa São Mateus e reconhecer todas as pessoas e organizações que ajudaram a transformar a iniciativa em uma mobilização que hoje envolve diferentes setores da cidade.",
+      "Durante a coletiva, imagens e registros das edições anteriores mostraram ações, bastidores, participação da comunidade e momentos que marcaram a história da campanha. A imprensa também recebeu um agradecimento especial pelo papel desempenhado na ampliação das informações sobre prevenção e na aproximação da campanha com a população.",
+      "A proposta para 2026 é continuar ampliando não apenas o número de participantes, mas principalmente o alcance da informação, a conscientização e o envolvimento da sociedade. Ao longo dos meses de setembro e outubro, diferentes ações de mobilização serão realizadas com a participação de empresas, instituições, profissionais, parceiros e comunidade.",
+      "O principal encontro da programação já tem data marcada: o Dia D do Outubro Rosa São Mateus 2026 será realizado no dia 10 de outubro, no SESC, reunindo em um mesmo espaço ações voltadas à prevenção, informação, cuidado e acolhimento.",
+      "Outro momento especial do lançamento foi a apresentação das Embaixadoras do Outubro Rosa São Mateus 2026 — mulheres que passam a integrar a mobilização ajudando a ampliar a voz da campanha, aproximar a mensagem de diferentes públicos e fortalecer a rede de cuidado que vem sendo construída na cidade.",
+      "Depois de quatro anos, o Outubro Rosa São Mateus reforça que a campanha já não é construída por uma única empresa ou instituição. É uma história construída pela cidade. E, em 2026, o convite se renova: você faz parte dessa história.",
+    ],
+    credit: null,
+  },
   {
     slug: "outubro-rosa-2025",
     title: "Outubro Rosa Edição 2025 – Esse laço nunca fez tanto sentido!",
