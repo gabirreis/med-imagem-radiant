@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import SectionHeading from "@/components/SectionHeading";
 import { examsData } from "@/data/exams";
 
 const Exames = () => {
   return (
     <Layout>
+      <Seo
+        title="Exames de diagnóstico por imagem – Med Imagem São Mateus"
+        description="Ultrassonografia, ressonância magnética, tomografia computadorizada, raio X digital e mamografia digital em São Mateus/ES, com tecnologia avançada e precisão."
+        path="/exames"
+      />
       <section className="py-16 bg-primary">
         <div className="container">
           <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">Nossos Exames</h1>

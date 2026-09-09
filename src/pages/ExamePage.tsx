@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { Phone, Clock, ArrowLeft, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { getExamBySlug, examsData } from "@/data/exams";
+import { SITE_NAME } from "@/config/site";
 
 const normalize = (s: string) =>
   s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -41,6 +43,20 @@ const ExamePage = () => {
 
   return (
     <Layout>
+      <Seo
+        title={`${exam.name} – Med Imagem São Mateus`}
+        description={`${exam.name} em São Mateus/ES na Med Imagem. ${exam.description}`}
+        path={`/${exam.slug}`}
+        image={exam.image}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "MedicalTest",
+          name: exam.name,
+          description: exam.description,
+          usedToDiagnose: exam.purpose,
+          provider: { "@type": "MedicalClinic", name: SITE_NAME },
+        }}
+      />
       {/* Hero */}
       <section className="relative py-16 bg-primary">
         <div className="container">

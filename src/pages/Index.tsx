@@ -5,13 +5,12 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { examsData } from "@/data/exams";
+import Seo from "@/components/Seo";
+import { newsArticles } from "@/data/news";
+import { SITE_DESCRIPTION, organizationJsonLd } from "@/config/site";
 import heroBg from "@/assets/hero-bg.webp";
 import clinicExterior from "@/assets/clinic-exterior.webp";
 import humanizacaoImg from "@/assets/cuidar-diagnosticar.webp.asset.json";
-import newsOutubroRosa2026Img from "@/assets/news-outubro-rosa-2026.webp";
-import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
-import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
-import newsJpr2025Img from "@/assets/news-jpr-2025.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,15 +35,16 @@ const Index = () => {
     { icon: Star, title: "Confiança construída ao longo do tempo", desc: "28 anos sendo referência em diagnóstico por imagem na região." },
   ];
 
-  const newsItems = [
-    { title: "Outubro Rosa São Mateus lança campanha 2026", date: "08 Set 2026", category: "Saúde", summary: "Com o conceito “Você faz parte dessa história”, o movimento chega ao quarto ano reunindo empresas, instituições e comunidade. O Dia D será em 10 de outubro, no SESC São Mateus.", image: newsOutubroRosa2026Img, slug: "outubro-rosa-2026" },
-    { title: "Outubro Rosa Edição 2025", date: "24 Set 2025", category: "Saúde", summary: "Med Imagem, Clínica Salles e CEDIM se unem mais uma vez para levar mamografias gratuitas a mulheres da região. O Dia D acontece em 4 de outubro no SESC São Mateus.", image: newsOutubraRosaImg, slug: "outubro-rosa-2025" },
-    { title: "Ciclo do Saber – Saúde Mental no Trabalho", date: "21 Ago 2025", category: "Evento", summary: "Med Imagem e parceiros apoiam evento do Senac sobre saúde mental realizado no SESC São Mateus com foco em prevenção e liderança.", image: newsCicloSaberImg, slug: "ciclo-do-saber-2025" },
-    { title: "Med Imagem na JPR 2025", date: "05 Mai 2025", category: "Evento", summary: "A clínica marcou presença na 55ª Jornada Paulista de Radiologia, maior evento de diagnóstico por imagem da América Latina, no Transamerica Expo Center em São Paulo.", image: newsJpr2025Img, slug: "jpr-2025" },
-  ];
+  const newsItems = newsArticles;
 
   return (
     <Layout>
+      <Seo
+        title="Med Imagem São Mateus – Diagnóstico por Imagem"
+        description={SITE_DESCRIPTION}
+        path="/"
+        jsonLd={organizationJsonLd}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -269,13 +269,13 @@ const Index = () => {
               variants={fadeUp}
               custom={0}
             >
-              <Link to={`/blog#${newsItems[0].slug}`} className="group block relative rounded-xl overflow-hidden aspect-[4/3] shadow-card hover:shadow-elevated transition-shadow">
+              <Link to={`/blog/${newsItems[0].slug}`} className="group block relative rounded-xl overflow-hidden aspect-[4/3] shadow-card hover:shadow-elevated transition-shadow">
                 <img src={newsItems[0].image} alt={newsItems[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full mb-3">{newsItems[0].category}</span>
                   <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">{newsItems[0].title}</h3>
-                  <p className="mt-2 text-sm text-white/80 line-clamp-2">{newsItems[0].summary}</p>
+                  <p className="mt-2 text-sm text-white/80 line-clamp-2">{newsItems[0].excerpt}</p>
                   <span className="mt-3 inline-block text-xs text-white/60">{newsItems[0].date}</span>
                 </div>
               </Link>
@@ -290,7 +290,7 @@ const Index = () => {
                   viewport={{ once: true }}
                   variants={fadeUp}
                 >
-                  <Link to={`/blog#${item.slug}`} className="group flex gap-4 bg-card rounded-lg p-4 shadow-card hover:shadow-elevated transition-shadow">
+                  <Link to={`/blog/${item.slug}`} className="group flex gap-4 bg-card rounded-lg p-4 shadow-card hover:shadow-elevated transition-shadow">
                     <div className="w-28 h-20 rounded-md overflow-hidden flex-shrink-0">
                       <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>

@@ -62,9 +62,33 @@
   </url>
   <url>
     <loc>https://medimagemsm.com.br/blog</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medimagemsm.com.br/blog/outubro-rosa-2026</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medimagemsm.com.br/blog/outubro-rosa-2025</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://medimagemsm.com.br/blog/ciclo-do-saber-2025</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://medimagemsm.com.br/blog/jpr-2025</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://medimagemsm.com.br/politica-de-privacidade</loc>

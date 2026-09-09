@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 
 const Contato = () => {
   return (
     <Layout>
+      <Seo
+        title="Contato – Med Imagem São Mateus"
+        description="Fale com a Med Imagem: Rua Ermelino Carneiro Sobrinho, 221 – Bairro Fátima, São Mateus/ES. Telefone (27) 3763-3366 e WhatsApp (27) 99868-4980."
+        path="/contato"
+      />
       <section className="py-16 bg-primary">
         <div className="container">
           <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">

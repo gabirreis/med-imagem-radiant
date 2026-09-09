@@ -11,6 +11,7 @@ import Convenios from "./pages/Convenios";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 import Blog from "./pages/Blog";
+import ArtigoPage from "./pages/ArtigoPage";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaCookies from "./pages/PoliticaCookies";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<ArtigoPage />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/termos-de-uso" element={<TermosDeUso />} />
           <Route path="/politica-de-cookies" element={<PoliticaCookies />} />

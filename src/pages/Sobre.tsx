@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import clinicExterior from "@/assets/clinic-exterior.webp";
 import sobrePrimeirosPassos from "@/assets/sobre-primeiros-passos.webp.asset.json";
 import evolucaoConstante from "@/assets/evolucao-constante.webp.asset.json";
@@ -19,6 +20,11 @@ const fadeUp = {
 const Sobre = () => {
   return (
     <Layout>
+      <Seo
+        title="Sobre a Med Imagem – 28 anos em São Mateus/ES"
+        description="Conheça a história da Med Imagem São Mateus: 28 anos de pioneirismo em diagnóstico por imagem no Norte Capixaba, com missão, visão e valores focados no cuidado ao paciente."
+        path="/sobre"
+      />
       {/* Hero */}
       <section className="py-16 bg-primary">
         <div className="container">

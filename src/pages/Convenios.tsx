@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import ambepLogo from "@/assets/convenios/ambep.png.asset.json";
 import amilLogo from "@/assets/convenios/amil.png.asset.json";
 import banescaixaLogo from "@/assets/convenios/banescaixa.png.asset.json";
@@ -75,6 +76,11 @@ const convenios: Convenio[] = [
 const Convenios = () => {
   return (
     <Layout>
+      <Seo
+        title="Convênios atendidos – Med Imagem São Mateus"
+        description="Conheça os convênios atendidos pela Med Imagem em São Mateus/ES: Unimed, Bradesco, Amil, Petrobras, CASSI e mais de 30 planos. Consulte a disponibilidade para o seu."
+        path="/convenios"
+      />
       <section className="py-16 bg-primary">
         <div className="container">
           <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">Convênios Atendidos</h1>

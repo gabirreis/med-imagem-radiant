@@ -1,0 +1,32 @@
+# Med Imagem São Mateus
+
+> Clínica de diagnóstico por imagem em São Mateus, no Norte do Espírito Santo (ES), com 28 anos de experiência. Oferece exames com tecnologia avançada e atendimento humanizado.
+
+Endereço: Rua Ermelino Carneiro Sobrinho, 221 – Bairro Fátima, São Mateus/ES.
+Telefone: (27) 3763-3366 · WhatsApp: (27) 99868-4980.
+Horário: segunda a sexta das 7h às 18h; sábado das 7h às 12h.
+Responsável Técnica: Dra. Cecilia Maria de Oliveira Gonçalves – CRM 6381.
+
+## Exames
+- [Ultrassonografia](https://medimagemsm.com.br/ultrassonografia): exame com ondas sonoras, sem radiação.
+- [Ressonância Magnética](https://medimagemsm.com.br/ressonancia-magnetica): imagens detalhadas por campo magnético, sem radiação.
+- [Raio X - Digital](https://medimagemsm.com.br/raio-x): avaliação de estruturas ósseas e torácicas.
+- [Tomografia Computadorizada](https://medimagemsm.com.br/tomografia): imagens em cortes transversais de alta precisão.
+- [Mamografia Digital](https://medimagemsm.com.br/mamografia): rastreamento e diagnóstico precoce do câncer de mama.
+
+## Páginas
+- [Início](https://medimagemsm.com.br/)
+- [Sobre a clínica](https://medimagemsm.com.br/sobre): história, missão, visão e valores.
+- [Todos os exames](https://medimagemsm.com.br/exames)
+- [Convênios atendidos](https://medimagemsm.com.br/convenios): mais de 30 convênios, incluindo Unimed, Bradesco, Amil, Petrobras e outros.
+- [Contato](https://medimagemsm.com.br/contato): endereço, telefones e mapa.
+- [Notícias](https://medimagemsm.com.br/blog)
+
+## Notícias
+- [Outubro Rosa São Mateus 2026](https://medimagemsm.com.br/blog/outubro-rosa-2026): lançamento da campanha 2026, Dia D em 10 de outubro no SESC São Mateus.
+- [Outubro Rosa Edição 2025](https://medimagemsm.com.br/blog/outubro-rosa-2025): mamografias gratuitas em parceria com Clínica Salles e CEDIM.
+- [Ciclo do Saber – Saúde Mental no Trabalho](https://medimagemsm.com.br/blog/ciclo-do-saber-2025)
+- [Med Imagem na JPR 2025](https://medimagemsm.com.br/blog/jpr-2025)
+
+## Como agendar
+Agendamentos pelo WhatsApp (27) 99868-4980 ou telefone (27) 3763-3366. Resultados de exames em https://web.clinux.com.br/portal/medimagemsm/resultados
