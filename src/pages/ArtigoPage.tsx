@@ -98,7 +98,7 @@ const ArtigoPage = () => {
 
           {/* Corpo do artigo (com formatação) */}
           <div className="mt-12 max-w-2xl mx-auto">
-            <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px] [&_strong]:font-semibold [&_strong]:text-foreground [&_em]:italic">
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px] text-justify [&_strong]:font-semibold [&_strong]:text-foreground [&_em]:italic">
               {article.content.map((paragraph, i) => (
                 <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
               ))}
