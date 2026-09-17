@@ -1,0 +1,22 @@
+{
+  "customizations": [
+    { "token": "google-fonts-import (Poppins/Inter)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--background/--foreground green palette (:root, 20 vars)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "dark-mode token block (OS preference)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--primary-dark", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--surface-soft", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--shadow-card", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--shadow-elevated", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--radius 0.75rem", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "sidebar token set (8 vars)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "font-heading (Poppins)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "font-body (Inter)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "container config (center, 1.5rem padding, 1280px cap)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes fade-up + animate-fade-up", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes pulse-soft + animate-pulse-soft", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "keyframes accordion-down/up", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "base layer: border-color, body font/antialiased, heading font", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".text-balance utility", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "html smooth scrolling", "source": "src/index.css", "reappliedIn": "src/styles.css" }
+  ]
+}
