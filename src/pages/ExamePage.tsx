@@ -1,5 +1,5 @@
 ﻿import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { Phone, Clock, ArrowLeft, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -110,7 +110,7 @@ const ExamePage = () => {
                         onChange={(e) => setQuery(e.target.value)}
                         placeholder="Buscar exame (ex: joelho, crânio, coluna)"
                         aria-label="Buscar exame"
-                        className="w-full pl-10 pr-3 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        className="w-full pl-10 pr-3 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-2 focus:ring-primary/40"
                       />
                     </div>
                     <span className="text-xs text-muted-foreground whitespace-nowrap">

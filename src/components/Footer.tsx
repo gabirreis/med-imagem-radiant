@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Phone, MapPin, Mail, Instagram, Facebook } from "lucide-react";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 

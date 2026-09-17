@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Tag, CalendarCheck, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";

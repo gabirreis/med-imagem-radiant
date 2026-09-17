@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { motion } from "framer-motion";
 import { CheckCircle, Phone, Stethoscope, Zap, Heart, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,6 +36,7 @@ const Index = () => {
   ];
 
   const newsItems = newsArticles;
+  const featuredNews = newsItems[0];
 
   return (
     <Layout>
@@ -269,16 +270,18 @@ const Index = () => {
               variants={fadeUp}
               custom={0}
             >
-              <Link to={`/blog/${newsItems[0].slug}`} className="group block relative rounded-xl overflow-hidden aspect-[4/3] shadow-card hover:shadow-elevated transition-shadow">
-                <img src={newsItems[0].image} alt={newsItems[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full mb-3">{newsItems[0].category}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">{newsItems[0].title}</h3>
-                  <p className="mt-2 text-sm text-white/80 line-clamp-2">{newsItems[0].excerpt}</p>
-                  <span className="mt-3 inline-block text-xs text-white/60">{newsItems[0].date}</span>
-                </div>
-              </Link>
+              {featuredNews && (
+                <Link to={`/blog/${featuredNews.slug}`} className="group block relative rounded-xl overflow-hidden aspect-[4/3] shadow-card hover:shadow-elevated transition-shadow">
+                  <img src={featuredNews.image} alt={featuredNews.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <span className="inline-block bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full mb-3">{featuredNews.category}</span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">{featuredNews.title}</h3>
+                    <p className="mt-2 text-sm text-white/80 line-clamp-2">{featuredNews.excerpt}</p>
+                    <span className="mt-3 inline-block text-xs text-white/60">{featuredNews.date}</span>
+                  </div>
+                </Link>
+              )}
             </motion.div>
             <div className="flex flex-col gap-4">
               {newsItems.slice(1).map((item, i) => (
