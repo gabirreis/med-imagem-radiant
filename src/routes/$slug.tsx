@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import ExamePage from "@/pages/ExamePage";
 import { seoHead } from "@/lib/seo-head";
 import { getExamBySlug } from "@/data/exams";
-import { SITE_NAME } from "@/config/site";
+import { SITE_NAME, SITE_URL } from "@/config/site";
 
 export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => ({ slug: params.slug }),
@@ -20,14 +20,25 @@ export const Route = createFileRoute("/$slug")({
       description: `${exam.name} em São Mateus/ES na Med Imagem. ${exam.description}`,
       path: `/${exam.slug}`,
       image: exam.image,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "MedicalTest",
-        name: exam.name,
-        description: exam.description,
-        usedToDiagnose: exam.purpose,
-        provider: { "@type": "MedicalClinic", name: SITE_NAME },
-      },
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalTest",
+          name: exam.name,
+          description: exam.description,
+          usedToDiagnose: exam.purpose,
+          provider: { "@type": "MedicalClinic", name: SITE_NAME },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Início", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Exames", item: `${SITE_URL}/exames` },
+            { "@type": "ListItem", position: 3, name: exam.name, item: `${SITE_URL}/${exam.slug}` },
+          ],
+        },
+      ],
     });
   },
   component: ExamePage,

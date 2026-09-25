@@ -54,6 +54,7 @@ const Footer = () => {
               <li><Link to="/convenios" className="hover:opacity-100 transition-opacity">Convênios</Link></li>
               <li><a href="https://web.clinux.com.br/portal/medimagemsm/resultados" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">Resultados</a></li>
               <li><Link to="/blog" className="hover:opacity-100 transition-opacity">Blog</Link></li>
+              <li><Link to="/perguntas-frequentes" className="hover:opacity-100 transition-opacity">Perguntas Frequentes</Link></li>
               <li><Link to="/contato" className="hover:opacity-100 transition-opacity">Contato</Link></li>
             </ul>
           </div>
