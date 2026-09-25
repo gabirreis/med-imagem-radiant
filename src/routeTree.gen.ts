@@ -14,6 +14,7 @@ import { Route as SlugRouteImport } from './routes/$slug'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ConveniosRouteImport } from './routes/convenios'
 import { Route as ExamesRouteImport } from './routes/exames'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
@@ -44,6 +45,11 @@ const ConveniosRoute = ConveniosRouteImport.update({
 const ExamesRoute = ExamesRouteImport.update({
   id: '/exames',
   path: '/exames',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/convenios': typeof ConveniosRoute
   '/exames': typeof ExamesRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/convenios': typeof ConveniosRoute
   '/exames': typeof ExamesRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/convenios': typeof ConveniosRoute
   '/exames': typeof ExamesRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/convenios'
     | '/exames'
+    | '/perguntas-frequentes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/sobre'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/convenios'
     | '/exames'
+    | '/perguntas-frequentes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/sobre'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/convenios'
     | '/exames'
+    | '/perguntas-frequentes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/sobre'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   ConveniosRoute: typeof ConveniosRoute
   ExamesRoute: typeof ExamesRoute
+  PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SobreRoute: typeof SobreRoute
@@ -208,6 +221,13 @@ declare module '@tanstack/react-router' {
       path: '/exames'
       fullPath: '/exames'
       preLoaderRoute: typeof ExamesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-cookies': {
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   ConveniosRoute: ConveniosRoute,
   ExamesRoute: ExamesRoute,
+  PerguntasFrequentesRoute: PerguntasFrequentesRoute,
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SobreRoute: SobreRoute,
