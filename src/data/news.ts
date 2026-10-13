@@ -1,3 +1,4 @@
+import newsDiaDOutubroRosa2026Img from "@/assets/news-dia-d-outubro-rosa-2026.webp";
 import newsOutubroRosa2026Img from "@/assets/news-outubro-rosa-2026.webp";
 import newsOutubraRosaImg from "@/assets/news-outubro-rosa.png";
 import newsCicloSaberImg from "@/assets/news-ciclo-saber.png";
@@ -34,6 +35,38 @@ export interface NewsArticle {
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    slug: "dia-d-outubro-rosa-2026",
+    title: "Dia D do Outubro Rosa São Mateus 2026 reúne prevenção e acolhimento no SESC",
+    excerpt:
+      "No dia 10 de outubro, o SESC São Mateus recebe o Dia D do Outubro Rosa — uma manhã dedicada à prevenção, à informação e ao cuidado com a saúde da mulher, com prescrição de exames, orientações, rodas de conversa e espaço de acolhimento infantil.",
+    date: "9 de outubro de 2026",
+    dateISO: "2026-10-09",
+    category: "Saúde",
+    image: newsDiaDOutubroRosa2026Img,
+    content: [
+      "No dia <strong>10 de outubro</strong>, o SESC São Mateus recebe o <strong>Dia D do Outubro Rosa São Mateus 2026</strong>, uma manhã dedicada à prevenção, à informação e ao cuidado com a saúde da mulher.",
+      "A programação foi pensada para acolher as mulheres de forma integral, reunindo <strong>médicos, profissionais de saúde, especialistas e instituições parceiras</strong> em diferentes frentes de orientação e cuidado.",
+      "Ao longo da manhã, o público terá acesso a <strong>prescrição de exames, orientações sobre prevenção e saúde da mulher, rodas de conversa e conteúdos sobre saúde mental, uso racional de medicamentos, proteção e planejamento para a vida</strong>, entre outros temas que fazem parte do cuidado feminino. A programação contará ainda com a participação de profissionais e instituições de diferentes áreas.",
+      "Mais do que levar informação, o Dia D quer proporcionar um ambiente onde a mulher possa <strong>chegar, ser acolhida, conversar, tirar dúvidas e olhar para diferentes dimensões da sua saúde e do seu bem-estar</strong>.",
+      "E para que as mães também possam participar com tranquilidade, o evento contará com um <strong>Espaço de Acolhimento Infantil</strong>, preparado para receber as crianças durante as atividades.",
+      "O Dia D será também um grande encontro da rede que vem construindo o Outubro Rosa São Mateus, reunindo <strong>embaixadoras, empresas, instituições, profissionais, voluntários e parceiros</strong> em torno da prevenção e do cuidado.",
+      "A programação detalhada, com os profissionais, temas e atividades que estarão presentes no Dia D, será divulgada ao longo dos próximos dias.",
+      "Há 4 anos unindo uma cidade pela prevenção e pelo cuidado. <strong>Você faz parte dessa história.</strong> Esse laço nunca fez tanto sentido.",
+    ],
+    highlight: {
+      title: "Dia D — Outubro Rosa São Mateus 2026",
+      items: [
+        { label: "Data", value: "10 de outubro de 2026" },
+        { label: "Horário", value: "8h às 12h" },
+        { label: "Local", value: "SESC São Mateus" },
+      ],
+    },
+    credit: null,
+    seoTitle: "Dia D do Outubro Rosa São Mateus 2026 – Med Imagem",
+    seoDescription:
+      "Dia D do Outubro Rosa São Mateus 2026: 10 de outubro, das 8h às 12h, no SESC São Mateus. Prevenção, prescrição de exames, orientações e acolhimento para a saúde da mulher.",
+  },
   {
     slug: "outubro-rosa-2026",
     title: "Outubro Rosa São Mateus lança campanha 2026",
